@@ -1,0 +1,201 @@
+{
+  Dock = {
+    Applications1024 = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "x-terminal-emulator.XTerm";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,3";
+        Lock = No;
+        PasteCommand = "x-terminal-emulator";
+        Command = xterm;
+      },
+      {
+        Forced = No;
+        Name = wmclock.WMClock;
+        DropCommand = "wmclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,2";
+        Lock = No;
+        PasteCommand = "wmclock %s";
+        Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = docker.Docker;
+        DropCommand = "wmdocker %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = No;
+        PasteCommand = "wmdocker %s";
+        Command = wmdocker;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "/usr/bin/WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = No;
+        PasteCommand = "/usr/bin/WPrefs %s";
+        Command = "/usr/bin/WPrefs";
+      }
+    );
+    AutoRaiseLower = Yes;
+    Applications = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = Yes;
+        Command = "/usr/bin/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = "x-terminal-emulator.XTerm";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,3";
+        Lock = No;
+        PasteCommand = "x-terminal-emulator";
+        Command = xterm;
+      },
+      {
+        Forced = No;
+        Name = wmclock.WMClock;
+        DropCommand = "wmclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,2";
+        Lock = No;
+        PasteCommand = "wmclock %s";
+        Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = docker.Docker;
+        DropCommand = "wmdocker %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = No;
+        PasteCommand = "wmdocker %s";
+        Command = wmdocker;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "/usr/bin/WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = No;
+        PasteCommand = "/usr/bin/WPrefs %s";
+        Command = "/usr/bin/WPrefs";
+      }
+    );
+    Lowered = Yes;
+    Position = "-64,0";
+  };
+  Clip = {
+    Forced = No;
+    Name = Logo.WMClip;
+    DropCommand = "wmsetbg -u -t %d";
+    BuggyApplication = No;
+    AutoLaunch = No;
+    Position = "1280,33";
+    Lock = No;
+    Command = "-";
+  };
+  Applications = ();
+  Drawers = ();
+  Workspaces = (
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = (
+          {
+            Forced = No;
+            Name = firefox.Firefox;
+            DropCommand = "firefox %d";
+            BuggyApplication = No;
+            AutoLaunch = No;
+            Position = "0,1";
+            Lock = No;
+            PasteCommand = "firefox %s";
+            Command = firefox;
+            Omnipresent = No;
+          },
+          {
+            Forced = No;
+            Name = thunderbird.Thunderbird;
+            DropCommand = "thunderbird %d";
+            BuggyApplication = No;
+            AutoLaunch = No;
+            Position = "0,2";
+            Lock = No;
+            PasteCommand = "thunderbird %s";
+            Command = thunderbird;
+            Omnipresent = No;
+          },
+          {
+            Forced = No;
+            Name = keepassxc.KeePassXC;
+            DropCommand = "keepassxc %d";
+            BuggyApplication = No;
+            AutoLaunch = No;
+            Position = "0,3";
+            Lock = No;
+            PasteCommand = "keepassxc %s";
+            Command = "/opt/KeePassXC-2.6.4-x86_64.AppImage";
+            Omnipresent = No;
+          },
+          {
+            Forced = No;
+            Name = caja.Caja;
+            DropCommand = "caja %d";
+            BuggyApplication = No;
+            AutoLaunch = No;
+            Position = "0,4";
+            Lock = No;
+            PasteCommand = "caja %s";
+            Command = caja;
+            Omnipresent = No;
+          }
+        );
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = Main;
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Bureau 2";
+    }
+  );
+  Workspace = Main;
+}
