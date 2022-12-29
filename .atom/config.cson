@@ -1,0 +1,21 @@
+"*":
+  "atom-abc-editor":
+    highlightCurrentTune: false
+  core:
+    telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+  editor:
+    atomicSoftTabs: false
+    autoIndentOnPaste: false
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "95ed4ccf-8f87-4103-8bb4-c9d7279f48f8"
+  welcome:
+    showOnStartup: false

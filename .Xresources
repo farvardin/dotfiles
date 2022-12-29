@@ -1,0 +1,137 @@
+! Farvardin s Xdefaults / Xresources
+
+! Make this default on debian my removing their system-wide config file
+! and source it with "xrdb -load ~/.Xresources" in your .bashrc (use with care)
+
+! sudo mv /etc/X11/app-defaults/XTerm /etc/X11/app-defaults/XTerm-0
+! sudo mv /etc/X11/app-defaults/XTerm-color /etc/X11/app-defaults/XTerm-color0
+! sudo mv /etc/X11/app-defaults/UXTerm /etc/X11/app-defaults/UXTerm-0
+! sudo mv /etc/X11/app-defaults/UXTerm-color /etc/X11/app-defaults/UXTerm-color0
+
+! #include "UXTerm"
+! #include "XTerm"
+
+*VT100*colorMode: on
+*VT100*boldColors: on
+*VT100*dynamicColors: on
+*VT100*italicULMode: on
+
+*colorMode: on
+*boldColors: on
+*dynamicColors: on
+*italicULMode: on
+
+! Uncomment this to use color for underline attribute
+*VT100*colorULMode: on
+
+! Uncomment this to use color for the bold attribute
+*VT100*colorBDMode: on
+
+! Uncomment this to use the bold/underline colors in preference to other colors
+!*VT100*colorAttrMode: on
+
+*VT100*translations: #override \n\
+Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+Shift Ctrl <Key> V: insert-selection(CLIPBOARD) \n\
+Ctrl <Key> minus: smaller-vt-font() \n\
+Ctrl <Key> plus: larger-vt-font()
+
+
+!xterm*background: #123
+!xterm*foreground: grey
+!xterm*color0:  PapayaWhip
+
+*fontMenu.Label:  Unicode Fonts
+*.utf8:    1
+*utf8Title:     true
+
+
+!xterm*faceName: courier
+!xterm*faceName: Ubuntu Mono
+!xterm*faceName: Hermit
+
+!xterm*faceName: terminus
+xterm*faceName: Monospace
+
+xterm*faceSize: 16
+xterm*renderFont: true
+!xterm*geometry: 127x37
+
+
+xterm*faceSize1: 10
+xterm*faceSize2: 12
+xterm*faceSize3: 14
+xterm*faceSize4: 18
+xterm*faceSize5: 20
+xterm*faceSize6: 22
+xterm*faceSize7: 24
+ 
+
+*fontMenu*fontdefault*Label:    Default (16-points)
+*fontMenu*font1*Label:  10-points
+*fontMenu*font2*Label:  12-points
+*fontMenu*font3*Label:  14-points
+*fontMenu*font4*Label:  18-points
+*fontMenu*font5*Label:  20-points
+*fontMenu*font6*Label:  22-points
+*fontMenu*font7*Label:  24-points
+
+
+!*.font5: -xos4-terminus-medium-r-normal-*-22-*-*-*-*-*-*-*
+!*.font6: -xos4-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*
+
+! *.font2:   -misc-fixed-medium-r-normal--8-80-75-75-c-50-iso10646-1
+! *.font:    -misc-fixed-medium-r-normal--18-160-75-75-c-80-iso10646-1
+! *.font3:   -misc-fixed-medium-r-normal---140-----iso10646-1
+! *.font4:   -misc-fixed-medium-r-normal---160-----iso10646-1
+! *.font5:   -misc-fixed-medium-r-normal---200-----iso10646-1
+! *.font6:   -misc-fixed-medium-r-normal---220-----iso10646-1
+
+
+
+
+! Here is an alternate set of fonts with better support for bold:
+!*VT100.font2:  -efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1
+!*VT100.font:   -efont-biwidth-medium-r-normal--10-100-75-75-p-50-iso10646-1
+!*VT100.font3:  -efont-biwidth-medium-r-normal--12-120-75-75-p-60-iso10646-1
+!*VT100.font4:  -efont-biwidth-medium-r-normal--14-140-75-75-p-70-iso10646-1
+!*VT100.font5:  -efont-biwidth-medium-r-normal--16-160-75-75-p-80-iso10646-1
+!*VT100.font6:  -efont-biwidth-medium-r-normal--24-240-75-75-p-120-iso10646-1
+
+! -----------------------------------------------------------------------------
+! File: gruvbox-dark.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! https://github.com/morhetz/gruvbox-contrib/blob/master/xresources/gruvbox-dark.xresources
+! Last Modified: 6 Sep 2014
+! -----------------------------------------------------------------------------
+
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2

@@ -1,0 +1,6 @@
+variable abc_encoding="utf8";
+% Italian users only
+%define variable abc_language = "it";
+autoload ("abc_mode", "abc");
+add_mode_for_extension ("abc", "abc"); % plain ABC
+add_mode_for_extension ("abc", "abp"); % ABC with abcpp macros

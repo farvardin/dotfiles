@@ -1,0 +1,141 @@
+# http://nano-editor.org 
+
+
+## When soft line wrapping is enabled, make it wrap lines at blanks
+## (tabs and spaces) instead of always at the edge of the screen.
+
+set softwrap
+set atblanks
+
+## new features
+set cutfromcursor   # CTRL+K cuts from cursor position to end of line.
+#set nohelp          # Disable the help information (CTRL+G to view the help screen).
+
+set suspend         # Enables CTRL+Z to suspend nano.
+set tabsize 4       # Sets tab-to-spaces size to 4.
+set tabstospaces    # Converts TAB key press to spaces.
+
+
+# include "/usr/share/nano/*.nanorc"         # Enables the syntax highlighting.
+include "/usr/local/share/nano/*.nanorc"   
+set speller "aspell -x -c"         # Sets what spelling utility to use.
+set constantshow    # Displays useful information e.g. line number and position in the bottom bar.
+set linenumbers     # Lines are numbered.
+set casesensitive   # Case insensitive search.
+set historylog      # Save the last 100 history searches for later use.
+set positionlog     # Saves the cursor position between editing sessions.
+#set zap             # Allows you to highlight text (CTRL+SHIFT+ARROW) and delete it with backspace.
+set autoindent      # A new line will have the same number of leading spaces as the previous one.
+#set indicator       # Displays a scroll bar on the right that shows the position and size of the current view port.
+#set minibar         # Displays file name and other information in the bottom bar. Removes top bar.
+
+
+# Enable and set a working backup directory
+#set backup                              # Creates backups of your current file.
+#set backupdir "~/.cache/nano/backups/"  # The location of the backups.
+
+
+
+## Colors
+set titlecolor brightwhite,blue
+set statuscolor brightwhite,green
+
+## Keybindings
+bind ^Q exit all
+bind ^S savefile main   # CTRL+S - Save
+bind ^W writeout main
+bind ^F whereis all    # CTRL+F - Find
+bind ^X cut all
+bind ^C copy main       # CTRC+C - Copy
+bind ^V paste all       # CTRL+V - Paste
+#bind ^H help all
+#bind ^H exit help
+bind ^Z undo main
+bind ^Y redo main
+bind ^P suspend main
+
+
+# Shortcut key bindings
+#bind ^C copy main      
+#bind ^V paste all      
+bind ^F whereis all     
+bind ^S savefile main   
+
+
+# Nano Editor syntax highlight rules for txt2tags tool
+# http://nano-editor.org        http://txt2tags.org
+#
+# Initial release by Aurelio Jargas on Nov/2003
+#
+
+syntax "txt2tags"  ".*.t2t"
+color brightwhite  "\*\*.*\*\*"
+color black,white  "//.*//"
+color brightcyan   "__.*__"
+color brightyellow "^ *[:+-] "
+color brightcyan   "^ *\|\| .*"
+color cyan         "^ *\| .*"
+color brightwhite  "^ *[_=-]{20,} *$"
+color white,red        "^ *=[^=].*[^=]=(\[.+\])?\s*$"
+color white,red       "^ *==[^=].*[^=]==(\[.+\])?\s*$"
+color white,red      "^ *===[^=].*[^=]===(\[.+\])?\s*$"
+color white,red     "^ *====[^=].*[^=]====(\[.+\])?\s*$"
+color white,red    "^ *=====[^=].*[^=]=====(\[.+\])?\s*$"
+color brightblue   "\[.*\]"
+color yellow       "^%.*"
+color brightyellow "%%date(\(.*\))?"
+color brightgreen  "``.*``"
+color brightgreen  "^``` .*"
+color brightgreen  start="^``` *$" end="^``` *$"
+
+
+## Syntax highlighting for uxntal assembler
+
+syntax uxntal "\.tal$"
+comment "( | )"
+
+# Opcodes
+color green "\<(BRK|LIT2?r?|(LDZ|INC|POP|DUP|NIP|SWP|OVR|ROT|EQU|NEQ|GTH|LTH|JMP|JCN|JSR|STH|LDZ|STZ|LDR|STR|LDA|STA|DEI|DEO|ADD|SUB|MUL|DIV|AND|ORA|EOR|SFT)2?r?k?)\>"
+
+# Raw word
+color yellow "\".+\>"
+
+# Raw char
+color yellow "'.\>"
+
+# Raw hex
+color yellow "\<([0-9a-f]{2}|[0-9a-f]{4})\>"
+
+# Hex literal
+color yellow "#([0-9a-f]{2}|[0-9a-f]{4})\>"
+
+# Absolute pad
+color lightred "\|([0-9a-f]{2}|[0-9a-f]{4})\>"
+
+# Relative pad
+color red "\$[0-9a-f]+\>"
+
+# Parent label
+color lightmagenta "@[_0-9a-zA-Z-]+\>"
+
+# Child label
+color lightblue "\&[_0-9a-zA-Z-]+\>"
+
+# Zero-page label
+color lightmagenta "\.[_0-9a-zA-Z-]+"
+
+# Zero-page child
+color lightblue "/[_0-9a-zA-Z-]+\>"
+
+# Absolute address
+color lightmagenta "[;:][_0-9a-zA-Z-]+\>"
+
+# Relative literal address
+color lightblue ",&?[_0-9a-zA-Z-]+\>"
+
+# Comments
+color lightwhite start="\([[:space:]]" end="[[:space:]]\)"
+
+# Trailing whitespace
+color ,green "[[:space:]]+$"
+

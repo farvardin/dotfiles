@@ -1,0 +1,24 @@
+
+editor = gvim -f
+
+[extensions]
+#hgext.bookmarks =
+#hggit = 
+extdiff =
+hgext.convert=
+
+[extdiff]
+cmd.meld = meld
+cmd.kdiff = kdiff3
+
+[merge-patterns]
+** = filemerge
+
+[merge-tools]
+filemerge.executable = meld
+filemerge.args =  $local $other
+filemerge.checkchanged = true
+filemerge.gui = true
+
+[ui]
+tls = False

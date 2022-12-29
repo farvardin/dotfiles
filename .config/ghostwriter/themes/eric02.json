@@ -1,0 +1,28 @@
+{
+    "dark": {
+        "accent": "#009bc8",
+        "background": "#262626",
+        "block": "#009bc8",
+        "cursor": "#b31771",
+        "emphasis": "#009bc8",
+        "error": "#b31771",
+        "foreground": "#d0d0d0",
+        "heading": "#009bc8",
+        "link": "#b31771",
+        "markup": "#225676",
+        "selection": "#29343e"
+    },
+    "light": {
+        "accent": "#009bc8",
+        "background": "#fffde9",
+        "block": "#009bc8",
+        "cursor": "#c23184",
+        "emphasis": "#009bc8",
+        "error": "#c23184",
+        "foreground": "#363c42",
+        "heading": "#c8064a",
+        "link": "#c23184",
+        "markup": "#7e1c3e",
+        "selection": "#f0e7c1"
+    }
+}
