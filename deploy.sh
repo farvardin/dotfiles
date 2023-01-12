@@ -14,7 +14,7 @@ for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.p
 echo -e "\n\n"
 
 # files
-for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .emacs .nanorc .Xresources
+for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .emacs .nanorc .Xresources 
     do
     if [ -f ~/"$R" ]; then
 		echo -e "~/$R is already present on your system."
@@ -40,6 +40,38 @@ for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.p
 		echo -e "\033[1mlinking\033[0m \033[4m$R\033[0m to ~/ ..."
 	fi
 done
+
+# SPECIAL
+# files in .config 
+for R in .config/redshift.conf
+    do
+    if [ -f ~/"$R" ]; then
+		echo -e "~/$R is already present on your system."
+		if cmp -s "$R" ~/"$R"; then
+			printf '   The files are the same \n\n'
+		else
+			printf '\n   The files are different, do you want to compare them? (y/n):\n'
+			read -r answer
+			if [[ "$answer" == "y" ]] ; then
+				$DIFF  "$R" ~/"$R"
+				echo -e "Now this script can backup your $R file to $R.old and link the $R dotfile from this folder to your home so it will become effective. Do you agree? (y/n)"
+				read -r answ2
+				if [[ "$answ2" == "y" ]] ; then
+					mv ~/"$R" ~/"$R".old
+					cp  `pwd`/"$R" ~/.config/
+					printf "Done. \n"
+				else printf "Nothing was changed. \n"
+				fi
+			fi
+		fi
+    else
+		cp  `pwd`/$R ~/.config/
+		echo -e "\033[1mCOPYing\033[0m \033[4m$R\033[0m to ~/.config/ ..."
+	fi
+done
+
+
+
 
 # folders
 for R in .vim .scite .dgen 
@@ -70,7 +102,7 @@ done
 
 # .config
 
-for R in .config/emacs .config/ghostwriter
+for R in .config/emacs .config/ghostwriter 
     do
     if [ -e ~/$R ]; then
 		echo -e "~/$R is already present on your system."
