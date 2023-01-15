@@ -1,0 +1,16 @@
+[keybindings]
+next-tab='<Alt>Right'
+prev-tab='<Alt>Left'
+
+[profiles/default]
+background-color='#FFFFFFFFDDDD'
+background-darkness=0.90000000000000002
+background-type='transparent'
+bold-color='#000000000000'
+font='Monospace 13'
+foreground-color='#000000000000'
+palette='#000000000000:#CDCD00000000:#0000CDCD0000:#CDCDCDCD0000:#1E1D9090FFFF:#CDCD0000CDCD:#0000CDCDCDCD:#E5E4E5E4E5E4:#4C4B4C4B4C4B:#FFFF00000000:#0000FFFF0000:#FFFFFFFF0000:#46468282B4B3:#FFFF0000FFFF:#0000FFFFFFFF:#FFFFFFFFFFFF'
+scrollback-unlimited=true
+silent-bell=true
+use-system-font=false
+visible-name='Par défaut'
