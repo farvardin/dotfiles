@@ -16,8 +16,8 @@ set tabsize 4       # Sets tab-to-spaces size to 4.
 set tabstospaces    # Converts TAB key press to spaces.
 
 
-# include "/usr/share/nano/*.nanorc"         # Enables the syntax highlighting.
-include "/usr/local/share/nano/*.nanorc"   
+include "/usr/share/nano/*.nanorc"         # Enables the syntax highlighting.
+# include "/usr/local/share/nano/*.nanorc"   
 set speller "aspell -x -c"         # Sets what spelling utility to use.
 set constantshow    # Displays useful information e.g. line number and position in the bottom bar.
 set linenumbers     # Lines are numbered.
