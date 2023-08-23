@@ -42,6 +42,7 @@ for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.p
 done
 
 # SPECIAL
+# PB with redshit and AppArmor rubbishes
 # files in .config 
 for R in .config/redshift.conf
     do
@@ -102,7 +103,7 @@ done
 
 # .config
 
-for R in .config/emacs .config/ghostwriter 
+for R in .config/emacs .config/ghostwriter .config/castor
     do
     if [ -e ~/$R ]; then
 		echo -e "~/$R is already present on your system."
@@ -141,7 +142,7 @@ for R in .byobu/keybindings.tmux
 	fi
 done
 
-# lagrange
+# lagrange: we want only general prefs and fonts, not private keys!
 for R in .config/lagrange/fonts .config/lagrange/prefs.cfg
     do
     if [ -f ~/$R ]; then

@@ -34,8 +34,8 @@ if [ -x /usr/bin/fortune ] ; then
 fi
 
 if [ -x $HOME/.cargo/env ] ; then
-    source "$HOME/.cargo/env"
-fi
+. "$HOME/.cargo/env"
+    fi
 
 if [ -d "/opt/adb/platform-tools" ] ; then
  export PATH="/opt/adb/platform-tools:$PATH"
@@ -44,3 +44,4 @@ fi
 
 
 export PATH="$HOME/.poetry/bin:$PATH"
+

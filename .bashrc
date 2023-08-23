@@ -125,6 +125,7 @@ esac
 
 #export TERM=xterm-256color-italic
 # source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 
 [ -f "/home/eric/.ghcup/env" ] && source "/home/eric/.ghcup/env" # ghcup-env
 export PATH=/temp/github/gcsplit/bin/Debug:$PATH
@@ -153,3 +154,8 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 # . /home/eric/.asdf/asdf.sh
 # . /home/eric/.asdf/completions/asdf.bash
+
+# disable ctrl+S for halting the terminal
+stty -ixon
+
+
