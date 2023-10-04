@@ -1,5 +1,5 @@
 [general]
-start_url = "gemini://gemini.circumlunar.space/capcom"
+start_url = "gemini://gem.ortie.org"
 max_width = 200
 
 [colors]
@@ -14,38 +14,38 @@ background = "#f2e5bc"
     background="#eaddb6"
 
 [characters]
-h1 = " "
-h2 = "  "
-h3 = "  "
+h1 = "# "
+h2 = "## "
+h3 = "### "
 list = "- "
 
 [fonts]
 [fonts.finger]
     family = "monospace"
-    size = 11
+    size = 13
 [fonts.gemini.text]
     family = "serif"
-    size = 11
+    size = 13
 [fonts.gemini.h1]
-    family = "sans"
-    size = 16
-    style = "bold"
+    family = "monospace"
+    size = 20
+    style = "normal"
 [fonts.gemini.h2]
     family = "monospace"
-    size = 13
-    style = "bold"
+    size = 18
+    style = "normal"
 [fonts.gemini.h3]
     family = "monospace"
-    size = 12
-    style = "bold"
+    size = 16
+    style = "normal"
 [fonts.gemini.list]
     family = "sans"
-    size = 11
+    size = 13
     style = "oblique"
 [fonts.gemini.quote]
-    family = "sans"
-    size = 10
+    family = "serif"
+    size = 13
     style = "italic"
 [fonts.gopher]
     family = "monospace"
-    size = 11
+    size = 13

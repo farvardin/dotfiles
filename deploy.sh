@@ -7,7 +7,7 @@ DIFF=meld
 
 # current status
 echo -e "\n\n\033[1mCurrent files status:\033[0m"
-for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .vim .scite .emacs .config/emacs .nanorc .Xresources
+for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .vim .scite .emacs .config/emacs .nanorc .Xresources .config/gforthrc0
 	do
 		ls -alh  ~/$R
 	done
@@ -41,9 +41,41 @@ for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.p
 	fi
 done
 
+# single file in .config
+
+for R in .config/gforthrc0
+    do
+    if [ -f ~/"$R" ]; then
+		echo -e "~/$R is already present on your system."
+		if cmp -s "$R" ~/"$R"; then
+			printf '   The files are the same \n\n'
+		else
+			printf '\n   The files are different, do you want to compare them? (y/n):\n'
+			read -r answer
+			if [[ "$answer" == "y" ]] ; then
+				$DIFF  "$R" ~/"$R"
+				echo -e "Now this script can backup your $R file to $R.old and link the $R dotfile from this folder to your home so it will become effective. Do you agree? (y/n)"
+				read -r answ2
+				if [[ "$answ2" == "y" ]] ; then
+					mv ~/"$R" ~/"$R".old
+					ln -s `pwd`/"$R" ~/.config/
+					printf "Done. \n"
+				else printf "Nothing was changed. \n"
+				fi
+			fi
+		fi
+    else
+		ln -s `pwd`/$R ~/.config/
+		echo -e "\033[1mlinking\033[0m \033[4m$R\033[0m to ~/ ..."
+	fi
+done
+
+
+
 # SPECIAL
 # PB with redshit and AppArmor rubbishes
 # files in .config 
+# which don't support symblinks
 for R in .config/redshift.conf
     do
     if [ -f ~/"$R" ]; then

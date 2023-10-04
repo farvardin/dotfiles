@@ -1,0 +1,37 @@
+\ loaded during the gforth boot 
+\ \\\\\\\\\\\\\\\\ 
+
+\ ' noop is bootmessage
+
+: myboot
+CR 
+ ." ~ ~ ~ ~ ~ ~ " CR
+ ." ~ gForth ~ " CR
+ ." ~ ~ ~ ~ ~ ~ " CR
+;
+
+: mycommand
+CR ." hello world " CR
+;
+
+' myboot is bootmessage
+
++status
+history-cold
+
+
+\ additional words
+\ \\\\\\\\\\\\\\\\
+
+: uf
+s" uxnemu -2x ~/roms/ufx.rom &" system 
+;
+
+: uf-glossary
+s" scite ~/ownCloud/en_cours/uxn/uf_forth/uf8/GLOSSARY & " system 
+;
+
+: q bye ;
+
+
+

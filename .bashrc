@@ -67,8 +67,12 @@ alias scite="SciTE"
 
 alias kubectl=microk8s.kubectl
 
-alias android-connect="mtpfs -o allow_other /mnt/nexus"
-alias android-disconnect="fusermount -u /mnt/nexus"
+alias uf-glossary="scite ~/ownCloud/en_cours/uxn/uf_forth/uf8/GLOSSARY"
+
+# alias android-connect="mtpfs -o allow_other /mnt/nexus"
+# alias android-disconnect="fusermount -u /mnt/nexus"
+
+
 
 # https://github.com/nvbn/thefuck
 if [ -f /usr/bin/thefuck ] || [ -f /usr/local/bin/thefuck ]; then
@@ -84,6 +88,9 @@ alias_help()
   my_aliases=$(egrep '^\s*alias\s+.+=' ${f}|sed -r 's/\s*alias\s+(.+)=\".+\"(\s*#\s*(.+))?/\1: \3;/')
   echo $my_aliases|tr ';' '\n'
 }
+
+alias ufx="uxnemu -2x ~/roms/ufx.rom" 
+alias uf="uxncli ~/roms/uf.rom" 
 
 #bind '"²":menu-complete'
 
@@ -159,3 +166,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 stty -ixon
 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
