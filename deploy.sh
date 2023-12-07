@@ -135,8 +135,8 @@ done
 
 # .config
 
-for R in .config/emacs .config/ghostwriter .config/castor
-    do
+for R in .config/emacs .config/ghostwriter .config/castor .config/geany 
+do
     if [ -e ~/$R ]; then
 		echo -e "~/$R is already present on your system."
     else
@@ -144,6 +144,21 @@ for R in .config/emacs .config/ghostwriter .config/castor
 		echo -e "\033[1mlinking\033[0m \033[4m$R\033[0m to ~/.config ..."
 	fi
 done
+
+# .config/GottCode ?
+
+# .local/share 
+
+for R in .local/share/GottCode/FocusWriter/Themes
+	do
+    if [ -e ~/$R ]; then
+		echo -e "~/$R is already present on your system."
+    else
+		ln -s `pwd`/$R ~/.local/share/GottCode/FocusWriter/
+		echo -e "\033[1mlinking\033[0m \033[4m$R\033[0m to ~/.local ..."
+	fi
+done
+
 
 # we won't copy the whole folder for those projects
 
