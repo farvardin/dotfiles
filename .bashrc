@@ -132,7 +132,7 @@ esac
 
 #export TERM=xterm-256color-italic
 # source "$HOME/.cargo/env"
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 [ -f "/home/eric/.ghcup/env" ] && source "/home/eric/.ghcup/env" # ghcup-env
 export PATH=/temp/github/gcsplit/bin/Debug:$PATH
@@ -170,3 +170,7 @@ stty -ixon
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
