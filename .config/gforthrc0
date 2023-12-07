@@ -3,6 +3,17 @@
 
 \ ' noop is bootmessage
 
+
+: myboot2  \ see below
+CR 
+ ." ~ ~ ~ ~ ~ ~ ~" CR
+ ." ~ My banner ~ " CR
+ ." ~ ~ ~ ~ ~ ~ ~" CR
+2 3 + .
+;
+
+
+
 : myboot
 CR 
  ." ~ ~ ~ ~ ~ ~ " CR
@@ -34,4 +45,59 @@ s" scite ~/ownCloud/en_cours/uxn/uf_forth/uf8/GLOSSARY & " system
 : q bye ;
 
 
+: array ( comp: --  | exec: index  -- addr )  
+    create 
+	0 ,  \ fill first value (index 0) with 0
+    does> 
+		\ swap cell * + 
+		swap cells +
+  ; 
 
+: editrc s" scite ~/.config/gforthrc0 &" system ;
+
+: info
+cr 
+." -------------------------------- " cr 
+." &, # (ou rien) : préfixe décimal " cr 
+." $ ou 0x        : préfixe hexa "  cr 
+." %              : préfixe binaire "  cr cr 
+;
+
+\ array myTemps 
+\     21 ,    32 ,    45 ,    44 ,    28 ,    12 , 
+\ 1 myTemps @ .   \ display 21 
+\ 6 myTemps @ .   \ display 12 
+
+
+
+: tobinary   ( &d -- %b )  \ convert decimal to binary
+." is " #37 emit 2 base ! u. decimal ;
+
+: bin. tobinary ; 
+
+: tohex 
+." is " #36 emit 16 base ! u. decimal ; 
+
+
+\ android (we use evaluate otherwise the compilation with gl-fscale
+\ crashes gforth on android start and isn't recognised on desktop linux)
+
+: fscale s" gl-fscale " evaluate ;
+
+: fonts s" 1.3e gl-fscale " evaluate ;
+
+
+: blocs s" use blocked.fb 0 list " evaluate ; 
+
+: editor s" export EDITOR=nano" system ;
+
+: nano s" export EDITOR=nano" system edit ;
+
+
+: myblocs s" ~/ownCloud/en_cours/programmation/forth/blocs.fs " open-blocks ;
+
+
+\ <!> only works with latest gforth 
+
+\ in options : --quiet ['] +status is bootmessage ;
+\ in options : --myboot ['] myboot2 is bootmessage ;
