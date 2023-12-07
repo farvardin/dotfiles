@@ -135,7 +135,7 @@ done
 
 # .config
 
-for R in .config/emacs .config/ghostwriter .config/castor .config/geany 
+for R in .config/emacs .config/ghostwriter .config/castor  .config/geany
 do
     if [ -e ~/$R ]; then
 		echo -e "~/$R is already present on your system."
@@ -146,6 +146,8 @@ do
 done
 
 # .config/GottCode ?
+
+
 
 # .local/share 
 
