@@ -132,7 +132,7 @@ esac
 
 #export TERM=xterm-256color-italic
 # source "$HOME/.cargo/env"
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 [ -f "/home/eric/.ghcup/env" ] && source "/home/eric/.ghcup/env" # ghcup-env
 export PATH=/temp/github/gcsplit/bin/Debug:$PATH
