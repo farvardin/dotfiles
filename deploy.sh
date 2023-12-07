@@ -7,7 +7,7 @@ DIFF=meld
 
 # current status
 echo -e "\n\n\033[1mCurrent files status:\033[0m"
-for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .vim .scite .emacs .config/emacs .nanorc .Xresources .config/gforthrc0
+for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .vim .emacs .config/emacs .nanorc .Xresources .config/gforthrc0
 	do
 		ls -alh  ~/$R
 	done
