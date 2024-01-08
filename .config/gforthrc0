@@ -13,13 +13,21 @@ CR
 ;
 
 
-
-: myboot
+: myboot-gforth
 CR 
  ." ~ ~ ~ ~ ~ ~ " CR
  ." ~ gForth ~ " CR
  ." ~ ~ ~ ~ ~ ~ " CR
 ;
+
+
+: myboot
+CR 
+ ." 🐉▓▓▓▒▒▒░░░░" CR
+ ."   gForth  ☼ " CR
+ ."   " CR
+;
+
 
 : mycommand
 CR ." hello world " CR
@@ -79,6 +87,13 @@ cr
 ." is " #36 emit 16 base ! u. decimal ; 
 
 
+\ calc
+
+: div ( Xe Ye -- Ze ) fdepth 0 = if s>f s>f fswap else then f/  ;
+: mul ( Xe Ye -- Ze ) fdepth 0 = if s>f s>f fswap else then f*  ;
+: add ( Xe Ye -- Ze ) fdepth 0 = if s>f s>f fswap else then f+  ;
+: eval f. ; 
+
 \ android (we use evaluate otherwise the compilation with gl-fscale
 \ crashes gforth on android start and isn't recognised on desktop linux)
 
@@ -92,6 +107,8 @@ cr
 : editor s" export EDITOR=nano" system ;
 
 : nano s" export EDITOR=nano" system edit ;
+
+: s2ram s" sudo s2ram -f" system ;
 
 
 : myblocs s" ~/ownCloud/en_cours/programmation/forth/blocs.fs " open-blocks ;

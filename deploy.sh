@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
+# https://github.com/farvardin/dotfiles
 # https://sourceforge.net/p/farvardin-dotfiles/code/ci/default/tree/
+# 
 # this script won't delete your existing configuration
 
 DIFF=meld
