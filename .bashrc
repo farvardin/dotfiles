@@ -1,4 +1,5 @@
 ## Farvardin's .bashrc
+## 2024-05
 
 source /etc/profile
 source ~/.profile
@@ -22,6 +23,8 @@ alias rm="rm -i" # mode interactif
 alias mv="mv -i"
 alias cp="cp -i"
 alias psg='ps auxww | grep'
+
+alias rmfirefoxcache='rm -fr /home/eric/.cache/mozilla/firefox/zv7szrpx.default-1697456657405/cache2/entries/* & printf "/home/eric/.cache/mozilla/firefox/zv7szrpx.default-1697456657405/cache2/entries/" '
 
 
 OS="`uname`"
@@ -73,6 +76,14 @@ alias uf-glossary="scite ~/ownCloud/en_cours/uxn/uf_forth/uf8/GLOSSARY"
 # alias android-disconnect="fusermount -u /mnt/nexus"
 
 
+## ALIASES
+alias ufx="uxnemu -2x ~/roms/ufx.rom" 
+alias uf="uxncli ~/roms/uf.rom" 
+alias picotron='/home/eric/ownCloud/en_cours/picotron/picotron'
+alias hp48g='x48ng'
+alias lagrange='/opt/Lagrange-1.17.0-x86_64.AppImage'
+alias lisp='sbcl'
+alias portacle='/opt/lisp-portacle/lin/bin/portacle'
 
 # https://github.com/nvbn/thefuck
 if [ -f /usr/bin/thefuck ] || [ -f /usr/local/bin/thefuck ]; then
@@ -89,14 +100,13 @@ alias_help()
   echo $my_aliases|tr ';' '\n'
 }
 
-alias ufx="uxnemu -2x ~/roms/ufx.rom" 
-alias uf="uxncli ~/roms/uf.rom" 
+
 
 #bind '"²":menu-complete'
 
 
 
-export  PATH=$PATH:/usr/NX/bin/:/usr/local/lib/:/usr/local/include/:/usr/local/bin:/home/eric/.local/share/Steam/ubuntu12_32/steam-runtime/i386/usr/lib/i386-linux-gnu/:/opt/utroff/bin/:$HOME/.local/bin/:$HOME/_mesdocs/mes_scripts/
+export  PATH=$PATH:/usr/NX/bin/:/usr/local/lib/:/usr/local/include/:/usr/local/bin:/home/eric/.local/share/Steam/ubuntu12_32/steam-runtime/i386/usr/lib/i386-linux-gnu/:/opt/utroff/bin/:$HOME/.local/bin/:$HOME/_mesdocs/mes_scripts/:$HOME/ownCloud/divers/opt/
 
 export GS_LIB=/home/eric/_mesdocs/mes_musiques/abc/site/fonts/
 #export JAVA_HOME=/opt/java/jre/bin/java
@@ -139,6 +149,13 @@ export PATH=/temp/github/gcsplit/bin/Debug:$PATH
 export PATH=/temp/github/gcsplit/SPAdes-3.11.1-Linux/bin:$PATH
 export PATH=/temp/github/gcsplit/KmerStream:$PATH
 
+
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_SCALE_FACTOR=1.2
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_DEVICE_PIXEL_RATIO=1
+
+
 ####### debian stuffs
 
 # append to the history file, don't overwrite it
@@ -174,3 +191,19 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
+
+
+##### >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/eric/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/eric/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
