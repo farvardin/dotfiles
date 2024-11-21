@@ -1,5 +1,5 @@
 ## Farvardin's .bashrc
-## 2024-05
+## 2024-06
 
 source /etc/profile
 source ~/.profile
@@ -55,6 +55,7 @@ alias cherche-ici="find ./ -depth -maxdepth 20 -iname "
 alias cherche-partout="find / -depth -maxdepth 50 -iname "
 alias android="/opt/adt-bundle-linux-x86_64-20131030/sdk/tools/android"
 # alias renpy="/opt/renpy/renpy.sh"
+alias genymotion=" /media/eric/sauvegardes/genymotion_android/genymotion/genymotion"
 alias frotzu="luit -encoding iso-8859-1 frotz -d -l 3 -r 3"
 alias killflash="killall plugin-container"
 alias killsaver="killall klorenz.kss"
@@ -81,9 +82,10 @@ alias ufx="uxnemu -2x ~/roms/ufx.rom"
 alias uf="uxncli ~/roms/uf.rom" 
 alias picotron='/home/eric/ownCloud/en_cours/picotron/picotron'
 alias hp48g='x48ng'
-alias lagrange='/opt/Lagrange-1.17.0-x86_64.AppImage'
+alias lagrange='/opt/Lagrange-1.18.1-x86_64.AppImage'
 alias lisp='sbcl'
 alias portacle='/opt/lisp-portacle/lin/bin/portacle'
+alias runabc='/opt/runabc/runabc.tcl'
 
 # https://github.com/nvbn/thefuck
 if [ -f /usr/bin/thefuck ] || [ -f /usr/local/bin/thefuck ]; then
@@ -106,7 +108,7 @@ alias_help()
 
 
 
-export  PATH=$PATH:/usr/NX/bin/:/usr/local/lib/:/usr/local/include/:/usr/local/bin:/home/eric/.local/share/Steam/ubuntu12_32/steam-runtime/i386/usr/lib/i386-linux-gnu/:/opt/utroff/bin/:$HOME/.local/bin/:$HOME/_mesdocs/mes_scripts/:$HOME/ownCloud/divers/opt/
+export  PATH=$PATH:/usr/NX/bin/:/usr/local/lib/:/usr/local/include/:/usr/local/bin:/home/eric/.local/share/Steam/ubuntu12_32/steam-runtime/i386/usr/lib/i386-linux-gnu/:/opt/utroff/bin/:$HOME/.local/bin/:$HOME/_mesdocs/mes_scripts/:$HOME/ownCloud/divers/opt/:/opt/:/usr/local/Gambit/bin/:$HOME/.local/share/yabridge/
 
 export GS_LIB=/home/eric/_mesdocs/mes_musiques/abc/site/fonts/
 #export JAVA_HOME=/opt/java/jre/bin/java
