@@ -9,9 +9,9 @@ Type=0
 
 [Foreground]
 Color=#fcffed
-Margin=95
+Margin=50
 Opacity=100
-Padding=10
+Padding=6
 Position=1
 Rounding=10
 RoundingDisabled=0
@@ -36,5 +36,5 @@ TabWidth=58
 
 [Text]
 Color=#475547
-Font="Zilla Slab Medium,20,-1,5,50,0,0,0,0,0"
+Font="Zilla Slab Medium,20,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
 Misspelled=#c99a23

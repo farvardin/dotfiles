@@ -1,6 +1,6 @@
 [General]
 LoadColor=#475547
-Name=OldSchoolDark2
+Name=OldSchoolDark petit
 
 [Background]
 Color=#475547
@@ -9,7 +9,7 @@ Type=0
 
 [Foreground]
 Color=#475547
-Margin=95
+Margin=30
 Opacity=100
 Padding=10
 Position=1
@@ -35,6 +35,6 @@ ParagraphBelow=10
 TabWidth=58
 
 [Text]
-Color=#bbf1c6
-Font="Courier 10 Pitch,18,-1,5,50,0,0,0,0,0"
+Color=#f9f06b
+Font="Courier 10 Pitch,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
 Misspelled=#c99a23
