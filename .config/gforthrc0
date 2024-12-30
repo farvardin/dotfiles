@@ -7,7 +7,7 @@
 : myboot2  \ see below
 CR 
  ." ~ ~ ~ ~ ~ ~ ~" CR
- ." ~ My banner ~ " CR
+ ." ~ My banner ☼ ~ " CR
  ." ~ ~ ~ ~ ~ ~ ~" CR
 2 3 + .
 ;
@@ -23,9 +23,9 @@ CR
 
 : myboot
 CR 
- ." 🐉▓▓▓▒▒▒░░░░" CR
- ."   gForth  ☼ " CR
- ."   " CR
+ ."    gForth-:;-" CR
+ ."  🐉▓▓▓▒▒▒░░░░ " CR
+ ."    " CR
 ;
 
 
@@ -41,6 +41,19 @@ history-cold
 
 \ additional words
 \ \\\\\\\\\\\\\\\\
+
+: blc at-xy ." ░" ;
+
+: aide 
+s" clear " system 
+20 1 do i 3 blc loop cr
+ ."  ░      AIDE       ░ " cr
+20 1 do i 5 blc loop cr
+."  - editrc " cr
+."  - uf " cr
+."  - info " 
+20 1 do i 10 blc loop cr
+;
 
 : uf
 s" uxnemu -2x ~/roms/ufx.rom &" system 
@@ -86,12 +99,15 @@ cr
 : tohex 
 ." is " #36 emit 16 base ! u. decimal ; 
 
+: hextodec
+." is " 10 base ! u. ;
 
 \ calc
 
 : div ( Xe Ye -- Ze ) fdepth 0 = if s>f s>f fswap else then f/  ;
 : mul ( Xe Ye -- Ze ) fdepth 0 = if s>f s>f fswap else then f*  ;
 : add ( Xe Ye -- Ze ) fdepth 0 = if s>f s>f fswap else then f+  ;
+: sub ( Xe Ye -- Ze ) fdepth 0 = if s>f s>f fswap else then f-  ;
 : eval f. ; 
 
 \ android (we use evaluate otherwise the compilation with gl-fscale

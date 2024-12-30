@@ -46,10 +46,11 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(custom-enabled-themes '(gruvbox-dark-soft))
+ '(custom-enabled-themes '(leuven))
  '(custom-safe-themes
    '("2ff9ac386eac4dffd77a33e93b0c8236bb376c5a5df62e36d4bfa821d56e4e20" "4c56af497ddf0e30f65a7232a8ee21b3d62a8c332c6b268c81e9ea99b11da0d3" "285d1bf306091644fb49993341e0ad8bafe57130d9981b680c1dbd974475c5c7" "57a29645c35ae5ce1660d5987d3da5869b048477a7801ce7ab57bfb25ce12d3e" default))
  '(font-use-system-font nil)
+ '(ispell-dictionary nil)
  '(package-selected-packages '(gruvbox-theme ergoemacs-mode solarized-theme)))
  
 
