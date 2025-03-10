@@ -195,7 +195,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
 
-##### >>> juliaup initialize >>>
+# >>> juliaup initialize >>>
+
 
 # !! Contents within this block are managed by juliaup !!
 
