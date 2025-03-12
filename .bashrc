@@ -1,5 +1,5 @@
 ## Farvardin's .bashrc
-## 2024-06
+## 2024-12
 
 source /etc/profile
 source ~/.profile
@@ -81,7 +81,7 @@ alias uf-glossary="scite ~/ownCloud/en_cours/uxn/uf_forth/uf8/GLOSSARY"
 alias ufx="uxnemu -2x ~/roms/ufx.rom" 
 alias uf="uxncli ~/roms/uf.rom" 
 alias picotron='/home/eric/ownCloud/en_cours/picotron/picotron'
-alias hp48g='x48ng'
+alias hp48g='/home/eric/ownCloud/divers/opt/hp48/x48ng'
 alias lagrange='/opt/Lagrange-1.18.1-x86_64.AppImage'
 alias lisp='sbcl'
 alias portacle='/opt/lisp-portacle/lin/bin/portacle'
@@ -210,3 +210,4 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+
