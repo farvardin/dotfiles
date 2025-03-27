@@ -231,3 +231,6 @@ for R in GNUstep/Defaults/WindowMaker GNUstep/Defaults/WMState
 	fi
 done
 
+
+# more
+sudo cp .scite/locale.fr.properties /usr/share/scite/
