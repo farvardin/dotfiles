@@ -27,14 +27,14 @@ for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.p
 			read -r answer
 			if [[ "$answer" == "y" ]] ; then
 				$DIFF  "$R" ~/"$R"
-				echo -e "Now this script can backup your $R file to $R.old and link the $R dotfile from this folder to your home so it will become effective. Do you agree? (y/n)"
-				read -r answ2
-				if [[ "$answ2" == "y" ]] ; then
-					mv ~/"$R" ~/"$R".old
-					ln -s `pwd`/"$R" ~/
-					printf "Done. \n"
-				else printf "Nothing was changed. \n"
-				fi
+			fi
+			echo -e "Now this script can backup your $R file to $R.old and link the $R dotfile from this folder to your home so it will become effective. Do you agree? (y/n)"
+			read -r answ2
+			if [[ "$answ2" == "y" ]] ; then
+				mv ~/"$R" ~/"$R".old
+				ln -s `pwd`/"$R" ~/
+				printf "Done. \n"
+			else printf "Nothing was changed. \n"
 			fi
 		fi
     else
