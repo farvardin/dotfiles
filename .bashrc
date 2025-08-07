@@ -153,7 +153,10 @@ export PATH=/temp/github/gcsplit/KmerStream:$PATH
 
 
 export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_SCALE_FACTOR=1.2
+# pb with some apps
+# export QT_SCALE_FACTOR=1.2
+export QT_SCALE_FACTOR=1
+export QT_SCALE_FACTOR_ROUNDING_POLICY=Round
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_DEVICE_PIXEL_RATIO=1
 
