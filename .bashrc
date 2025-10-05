@@ -62,6 +62,7 @@ alias killsaver="killall klorenz.kss"
 alias kill9="kill -9"
 alias locateall="locate -iA"
 alias openall="xdg-open"
+alias xopen="xdg-open"
 alias todo='todo.sh -d ~/_mesdocs/mes_vcs/dotfiles/todo.cfg'
 alias xterm="xterm -font -*-fixed-medium-r-*-*-20-*-*-*-*-*-*-* -geometry 70x24"
 
@@ -214,3 +215,4 @@ esac
 
 # <<< juliaup initialize <<<
 
+# . "$HOME/.cargo/env"

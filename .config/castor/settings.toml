@@ -17,14 +17,14 @@ background = "#f2e5bc"
 h1 = "# "
 h2 = "## "
 h3 = "### "
-list = "- "
+list = "* "
 
 [fonts]
 [fonts.finger]
     family = "monospace"
     size = 13
 [fonts.gemini.text]
-    family = "serif"
+    family = "sans"
     size = 13
 [fonts.gemini.h1]
     family = "monospace"
@@ -41,7 +41,7 @@ list = "- "
 [fonts.gemini.list]
     family = "sans"
     size = 13
-    style = "oblique"
+    style = "normal"
 [fonts.gemini.quote]
     family = "serif"
     size = 13

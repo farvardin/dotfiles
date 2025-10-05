@@ -4,6 +4,12 @@
 \ ' noop is bootmessage
 
 
+vocabulary eric-list
+
+also eric-list
+
+eric-list definitions
+
 : myboot2  \ see below
 CR 
  ." ~ ~ ~ ~ ~ ~ ~" CR
@@ -53,6 +59,7 @@ s" clear " system
 ."  - uf " cr
 ."  - info " 
 20 1 do i 10 blc loop cr
+."  - words " cr
 ;
 
 : uf
@@ -132,5 +139,6 @@ cr
 
 \ <!> only works with latest gforth 
 
-\ in options : --quiet ['] +status is bootmessage ;
-\ in options : --myboot ['] myboot2 is bootmessage ;
+ in options : --quiet ['] +status is bootmessage ;
+ in options : --myboot ['] myboot2 is bootmessage ;
+

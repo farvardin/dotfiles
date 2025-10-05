@@ -1,0 +1,58 @@
+filetype: txt2tags
+
+detect:
+    filename: "\\.(t2t)$"
+
+rules:
+    # Tables 
+    - type: ".*[ :]\\|[ :].*"
+
+      # quotes
+    - statement:  "^>.*"
+
+      # Italic
+    - type: "(^|[[:space:]])(//[^ ]*//)(^|[[:space:]])"
+
+      # Bold
+    - type: "(^|[[:space:]])(\\*\\*[^ ]*\\*\\*)(^|[[:space:]])"
+    
+      # Underline
+    - type: "(^|[[:space:]])(__[^ ]*__)(^|[[:space:]])"
+
+      # strike-through
+    - type: "(^|[[:space:]])--[^ ][^~]*--"
+
+      # horizontal rules
+    - special: "^(---+|===+|___+|\\*\\*\\*+)\\s*$"
+
+      # headlines
+    - special:  "^={1,6}.*"
+
+      # lists
+    - identifier:   "^[[:space:]]*[\\*+-] |^[[:space:]]*[0-9]+\\. "
+
+      # misc
+    - preproc:   "(\\(([CcRr]|[Tt][Mm])\\)|\\.{3}|(^|[[:space:]])\\-\\-($|[[:space:]]))"
+
+      # links
+    - constant: "\\[[^]]+\\]"
+    - constant: "\\[([^][]|\\[[^]]*\\])*\\]\\([^)]+\\)"
+
+      # images
+    - underlined: "!\\[[^][]*\\](\\([^)]+\\)|\\[[^]]+\\])"
+
+      # urls
+    - underlined: "https?://[^ )>]+"
+
+    - special: "^```$"
+
+    - special:
+        start: "`"
+        end: "`"
+        rules: []  
+    
+    - comment: 
+        start: "% *"
+        end: "$"
+        rules: []  
+        
