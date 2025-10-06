@@ -7,7 +7,7 @@ source ~/.profile
 # don't load xrdb, it will messed up remote connections
 # use .Xresources instead, it should be loaded by the WM
 # xrdb -load ~/.Xdefaults
-# xrdb -load ~/.Xresources
+xrdb -load ~/.Xresources
 # [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 if [ -f /etc/bash_completion ]; then
