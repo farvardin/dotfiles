@@ -11,7 +11,7 @@ set atblanks
 set cutfromcursor   # CTRL+K cuts from cursor position to end of line.
 #set nohelp          # Disable the help information (CTRL+G to view the help screen).
 
-set suspend         # Enables CTRL+Z to suspend nano.
+# set suspend         # Enables CTRL+Z to suspend nano.
 set tabsize 4       # Sets tab-to-spaces size to 4.
 set tabstospaces    # Converts TAB key press to spaces.
 
