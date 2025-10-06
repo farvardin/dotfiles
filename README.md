@@ -22,7 +22,7 @@ If you have read/write access to this repository (which is very doubtful, but it
 the command would be:
 
 
-        git@github.com:farvardin/dotfiles.git
+        git clone git@github.com:farvardin/dotfiles.git
         
         or 
         
