@@ -215,8 +215,4 @@ esac
 
 # <<< juliaup initialize <<<
 
-<<<<<<< HEAD
-. "$HOME/.cargo/env"
-=======
 # . "$HOME/.cargo/env"
->>>>>>> 7800679e2b9aed51d37b0d45c2658830e7d56bb6
