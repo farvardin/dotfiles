@@ -7,7 +7,7 @@ source ~/.profile
 # don't load xrdb, it will messed up remote connections
 # use .Xresources instead, it should be loaded by the WM
 # xrdb -load ~/.Xdefaults
-# xrdb -load ~/.Xresources
+xrdb -load ~/.Xresources
 # [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 if [ -f /etc/bash_completion ]; then
@@ -154,7 +154,10 @@ export PATH=/temp/github/gcsplit/KmerStream:$PATH
 
 
 export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_SCALE_FACTOR=1.2
+# pb with some apps
+# export QT_SCALE_FACTOR=1.2
+export QT_SCALE_FACTOR=1
+export QT_SCALE_FACTOR_ROUNDING_POLICY=Round
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_DEVICE_PIXEL_RATIO=1
 
@@ -212,4 +215,8 @@ esac
 
 # <<< juliaup initialize <<<
 
+<<<<<<< HEAD
 . "$HOME/.cargo/env"
+=======
+# . "$HOME/.cargo/env"
+>>>>>>> 7800679e2b9aed51d37b0d45c2658830e7d56bb6

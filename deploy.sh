@@ -9,7 +9,7 @@ DIFF=meld
 
 # current status
 echo -e "\n\n\033[1mCurrent files status:\033[0m"
-for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .vim .emacs .config/emacs .nanorc .Xresources .config/gforthrc0
+for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .vim .emacs .config/emacs .nanorc .Xresources .config/gforthrc0 
 	do
 		ls -alh  ~/$R
 	done
@@ -45,7 +45,7 @@ done
 
 # single file in .config
 
-for R in .config/gforthrc0
+for R in .config/gforthrc0 
     do
     if [ -f ~/"$R" ]; then
 		echo -e "~/$R is already present on your system."
@@ -137,7 +137,7 @@ done
 
 # .config
 
-for R in .config/emacs .config/ghostwriter .config/castor  .config/geany .config/nvim
+for R in .config/emacs .config/ghostwriter .config/castor  .config/geany .config/nvim .config/micro
 do
     if [ -e ~/$R ]; then
 		echo -e "~/$R is already present on your system."
@@ -149,7 +149,7 @@ done
 
 # .config/GottCode ?
 
-
+# .config micro
 
 # .local/share 
 
