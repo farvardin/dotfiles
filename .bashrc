@@ -1,5 +1,5 @@
 ## Farvardin's .bashrc
-## 2024-12
+## 2025-10
 
 source /etc/profile
 source ~/.profile
@@ -124,7 +124,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 
 export SVN_EDITOR=vim
-export EDITOR="gvim -f"
+export EDITOR="nano"
 export SH=/bin/bash
 
 

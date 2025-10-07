@@ -5,6 +5,11 @@
 # 
 # this script won't delete your existing configuration
 
+# apt install xterm meld scite byobu gimp inkscape focuswriter geany micro exuberant-ctags fzf
+# sudo add-apt-repository ppa:gottcode/gcppa
+# optionel : gimp-gmic gmic blender veracrypt  hatari gforth freeplane   mcomix nextcloud retroarch syncthing calibre vlc
+# cadence
+
 DIFF=meld
 
 # current status
