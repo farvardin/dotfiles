@@ -1,5 +1,5 @@
 ## Farvardin's .bashrc
-## 2024-12
+## 2025-10
 
 source /etc/profile
 source ~/.profile
@@ -124,7 +124,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 
 export SVN_EDITOR=vim
-export EDITOR="gvim -f"
+export EDITOR="nano"
 export SH=/bin/bash
 
 
@@ -215,8 +215,4 @@ esac
 
 # <<< juliaup initialize <<<
 
-<<<<<<< HEAD
-. "$HOME/.cargo/env"
-=======
 # . "$HOME/.cargo/env"
->>>>>>> 7800679e2b9aed51d37b0d45c2658830e7d56bb6

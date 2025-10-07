@@ -5,18 +5,23 @@
 # 
 # this script won't delete your existing configuration
 
+# apt install xterm meld scite byobu gimp inkscape focuswriter geany micro exuberant-ctags fzf
+# sudo add-apt-repository ppa:gottcode/gcppa
+# optionel : gimp-gmic gmic blender veracrypt  hatari gforth freeplane   mcomix nextcloud retroarch syncthing calibre vlc
+# cadence
+
 DIFF=meld
 
 # current status
 echo -e "\n\n\033[1mCurrent files status:\033[0m"
-for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .vim .emacs .config/emacs .nanorc .Xresources .config/gforthrc0 
+for R in .bashrc .ctwmrc .ctags garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .vim .emacs .config/emacs .nanorc .Xresources .config/gforthrc0 
 	do
 		ls -alh  ~/$R
 	done
 echo -e "\n\n"
 
 # files
-for R in .bashrc .ctwmrc garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .emacs .nanorc .Xresources 
+for R in .bashrc .ctwmrc .ctags garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .emacs .nanorc .Xresources 
     do
     if [ -f ~/"$R" ]; then
 		echo -e "~/$R is already present on your system."
