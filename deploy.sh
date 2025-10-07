@@ -233,4 +233,12 @@ done
 
 
 # more
-sudo cp .scite/locale.fr.properties /usr/share/scite/
+printf "Now this script can install french locale properties for scite in /usr/share/scite/ (using sudo). Do you agree? (y/n)"
+				read -r answ2
+				if [[ "$answ2" == "y" ]] ; then
+					sudo cp .scite/locale.fr.properties /usr/share/scite/
+					printf "Done. \n"
+				else printf "Nothing was changed. \n"
+				fi
+				
+
