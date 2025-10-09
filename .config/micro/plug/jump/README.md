@@ -71,3 +71,6 @@ Well done, you have now installed micro-jump and Markdown and txt2tags support.
 Copyright 2020-2021 Tero Karvinen https://TeroKarvinen.com
 Code repository https://github.com/terokarvinen/micro-jump
 MIT license
+
+note: all keybindings: https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md
+

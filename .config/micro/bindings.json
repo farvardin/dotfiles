@@ -1,5 +1,8 @@
 {
     "Alt-/": "lua:comment.comment",
+    "Ctrl-Space": "WordRight",
+    "Ctrl-w": "WordLeft",
     "CtrlUnderscore": "lua:comment.comment",
-    "F11": "command:jumptag"
+    "F11": "command:jumptag",
+    "F12": "NextTab"
 }
