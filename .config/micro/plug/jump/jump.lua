@@ -14,7 +14,8 @@ end
 
 function jumptagCommand(bp) -- bp BufPane
 		local filename = bp.Buf.Path
-		local cmd = string.format("bash -c \"ctags -f - --fields=n '%s'|fzf --layout=reverse|tr ':' '\n'|tail -1\"", filename)
+		-- local cmd = string.format("bash -c \"ctags -f - --fields=n '%s'|fzf --layout=reverse |tr ':' '\n'|tail -1\"", filename)
+		local cmd = string.format("bash -c \"ctags -f - --fields=n --sort=no '%s' | fzf --layout=reverse --no-sort |tr ':' '\n'|tail -1\"", filename)
 		local out = shell.RunInteractiveShell(cmd, false, true)
 		if tonumber(out) == nil then
 			micro.InfoBar():Message("Jump cancelled.")
