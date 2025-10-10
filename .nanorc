@@ -9,7 +9,7 @@ set atblanks
 
 ## new features
 set cutfromcursor   # CTRL+K cuts from cursor position to end of line.
-#set nohelp          # Disable the help information (CTRL+G to view the help screen).
+set nohelp          # Disable the help information (CTRL+G to view the help screen).
 
 
 # set suspend         # Enables CTRL+Z to suspend nano. (not available in old nano)
@@ -61,8 +61,10 @@ bind ^P suspend main
 #bind ^C copy main      
 #bind ^V paste all      
 bind ^F whereis all     
-bind ^S savefile main   
+bind ^S savefile main  
 
+bind F12 nextbuf  main  # we don't need spellchecker 
+bind F11 findnext main 
 
 # Nano Editor syntax highlight rules for txt2tags tool
 # http://nano-editor.org        http://txt2tags.org
@@ -90,6 +92,8 @@ color brightgreen  "``.*``"
 color brightgreen  "^``` .*"
 color brightgreen  start="^``` *$" end="^``` *$"
 
+header "=="
+linter ""
 
 ## Syntax highlighting for uxntal assembler
 
