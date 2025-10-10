@@ -65,6 +65,7 @@ bind ^S savefile main
 
 bind F12 nextbuf  main  # we don't need spellchecker 
 bind F11 findnext main 
+bind F23 findprevious main    # shift F11
 
 # Nano Editor syntax highlight rules for txt2tags tool
 # http://nano-editor.org        http://txt2tags.org
