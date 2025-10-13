@@ -9,13 +9,13 @@
 --regex-markdown=/^(### \S.*)/. . . . . . . . \1/h,toc/
 
 --langdef=txt2tags
---langmap=txt2tags:.t2t.txt2tags
+--langmap=txt2tags:.t2t.txt2tags.txt
 --regex-txt2tags=/^(= \S.*)/\1/h,h1/
 
 --regex-txt2tags=/\/\/\s*(TODO.*$)/\1/h,todo/
 
 --regex-txt2tags=/^(= \S.*)/\1/h,toc/
---regex-txt2tags=/^(== \S.*)/. . . . \1/h,toc/
---regex-txt2tags=/^(=== \S.*)/. . . . . . . . \1/h,toc/
-
-
+--regex-txt2tags=/^(== \S.*)/. \1/h,toc/
+--regex-txt2tags=/^(=== \S.*)/. . \1/h,toc/
+#--regex-txt2tags=/^(% \S.*)/\1/h,todo/
+#--regex-txt2tags=/^(\*\*\S.*\*\*)/\1/h,todo/

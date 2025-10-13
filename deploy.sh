@@ -21,7 +21,7 @@ apt-mini() {
 apt-extra() {
 	printf "We will install some more deb packages on the system. \n\n"
 	sleep 2
-	sudo gimp-gmic gmic blender veracrypt hatari gforth freeplane mcomix nextcloud retroarch syncthing calibre vlc
+	sudo gimp-gmic gmic blender veracrypt gocryptfs hatari gforth freeplane mcomix nextcloud-desktop retroarch syncthing calibre vlc
 }
 
 deploy_dotfiles() {

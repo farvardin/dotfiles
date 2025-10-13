@@ -17,13 +17,13 @@ rules:
     - type: "(^|[[:space:]])(\\*\\*[^ ]*\\*\\*)(^|[[:space:]])"
     
       # Underline
-    - type: "(^|[[:space:]])(__[^ ]*__)(^|[[:space:]])"
+    - underlined: "(^|[[:space:]])(__[^ ]*__)(^|[[:space:]])"
 
       # strike-through
-    - type: "(^|[[:space:]])--[^ ][^~]*--"
+    - type: "(^|[[:space:]])--[^ ]*--[[:space:]]"
 
       # horizontal rules
-    - special: "^(---+|===+|___+|\\*\\*\\*+)\\s*$"
+    - special: "^(-----+|=====+)\\s*$"
 
       # headlines
     - special:  "^={1,6}.*"
@@ -45,12 +45,20 @@ rules:
     - underlined: "https?://[^ )>]+"
 
     - special: "^```$"
+    
+      # textallion
+    - special: "\\{.{4}\\}"
+      # dialog
+    - special: "--- "
+    - special: "«"
+    - special: "»"
 
     - special:
         start: "`"
         end: "`"
         rules: []  
-    
+        
+    # comment and type highlights also depends on colorscheme
     - comment: 
         start: "% *"
         end: "$"
