@@ -14,19 +14,19 @@ rules:
     - type: "(^|[[:space:]])(//[^ ]*//)(^|[[:space:]])"
 
       # Bold
-    - type: "(^|[[:space:]])(\\*\\*[^ ]*\\*\\*)(^|[[:space:]])"
+    - constant: "(^|[[:space:]])(\\*\\*[^ ]*\\*\\*)(^|[[:space:]])"
     
       # Underline
     - underlined: "(^|[[:space:]])(__[^ ]*__)(^|[[:space:]])"
 
       # strike-through
-    - type: "(^|[[:space:]])--[^ ]*--[[:space:]]"
+    - comment: "(^|[[:space:]])--[^ ]*--[[:space:]]"
 
       # horizontal rules
     - special: "^(-----+|=====+)\\s*$"
 
       # headlines
-    - special:  "^={1,6}.*"
+    - constant:  "^={1,6}.*"
 
       # lists
     - identifier:   "^[[:space:]]*[\\*+-] |^[[:space:]]*[0-9]+\\. "
@@ -52,6 +52,8 @@ rules:
     - special: "--- "
     - special: "«"
     - special: "»"
+    
+    - todo: "TODO"
 
     - special:
         start: "`"
