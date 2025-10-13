@@ -15,7 +15,7 @@
 --regex-txt2tags=/\/\/\s*(TODO.*$)/\1/h,todo/
 
 --regex-txt2tags=/^(= \S.*)/\1/h,toc/
---regex-txt2tags=/^(== \S.*)/. . . . \1/h,toc/
---regex-txt2tags=/^(=== \S.*)/. . . . . . . . \1/h,toc/
-
-
+--regex-txt2tags=/^(== \S.*)/. \1/h,toc/
+--regex-txt2tags=/^(=== \S.*)/. . \1/h,toc/
+#--regex-txt2tags=/^(% \S.*)/\1/h,todo/
+#--regex-txt2tags=/^(\*\*\S.*\*\*)/\1/h,todo/

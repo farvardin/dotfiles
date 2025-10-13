@@ -17,7 +17,7 @@ rules:
     - type: "(^|[[:space:]])(\\*\\*[^ ]*\\*\\*)(^|[[:space:]])"
     
       # Underline
-    - type: "(^|[[:space:]])(__[^ ]*__)(^|[[:space:]])"
+    - underlined: "(^|[[:space:]])(__[^ ]*__)(^|[[:space:]])"
 
       # strike-through
     - type: "(^|[[:space:]])--[^ ][^~]*--"
@@ -50,8 +50,8 @@ rules:
         start: "`"
         end: "`"
         rules: []  
-    
-    - comment: 
+    # comment and type not working anymore ?
+    - constant: 
         start: "% *"
         end: "$"
         rules: []  
