@@ -1,3 +1,19 @@
+# remove some of the 744 exotics fonts for tty
+cd /usr/share/consolefonts
+rm -fr Vietna*
+rm -fr Arabic*
+rm -fr Armen*
+rm -fr Greek*
+rm -fr Hebr*
+rm -fr Thai*
+rm -fr Georgian*
+rm -fr FullCy*
+rm -fr FullGreek*
+rm -fr Ethio*
+rm -fr Cyr*
+rm -fr Lao*
+
+
 # remove many of the noto variants. Keep only some.
 
 mkdir -p /tmp/fonts/noto/
