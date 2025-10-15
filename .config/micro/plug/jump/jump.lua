@@ -16,8 +16,14 @@ function jumptagCommand(bp) -- bp BufPane
 		local filename = bp.Buf.Path
 		-- local cmd = string.format("bash -c \"ctags -f - --fields=n '%s'|fzf --layout=reverse |tr ':' '\n'|tail -1\"", filename)
 		local cmd = string.format("bash -c \"ctags -f - --fields=n --sort=no '%s' | fzf --layout=reverse --no-sort |tr ':' '\n'|tail -1\"", filename)
+		-- doesn't workn why? :
+		--local cmd = string.format("bash -c \"ctags -f - --fields=n --sort=no '%s'  | perl -p -e 's/\/.+\//-/g' | perl -p -e 's/;\"/-/g'| fzf --layout=reverse --no-sort |tr ':' '\n' |sed 's/[^0-9]*//g'|tail -1|bc -s\"", filename)
+		--local cmd = string.format("bash -c \"ctags -f - --fields=n --sort=no '%s'  | perl -p -e 's/.t2t/-/g' | perl -p -e 's@== .+ ==/@ @g'| fzf --layout=reverse --no-sort |tr ':' '\n' |sed 's/[^0-9]*//g'|tail -1|bc -s\"", filename)
+		--local cmd = string.format("bash -c \"ctags -f - --fields=n --sort=no '%s' | sed 's/\/.\+\//-/' | sed 's/;\"/-/' | fzf --layout=reverse --no-sort |tr ':' '\n' |sed 's/[^0-9]*//g'|tail -1|bc -s\"", filename)
+		--local out = 1
 		local out = shell.RunInteractiveShell(cmd, false, true)
 		if tonumber(out) == nil then
+			--micro.InfoBar():Message(out)
 			micro.InfoBar():Message("Jump cancelled.")
 			return
 		end
