@@ -190,6 +190,15 @@ deploy_dotfiles() {
 		fi
 	done
 
+	for R in .local/share/cool-retro-term
+		do
+		if [ -e ~/$R ]; then
+			echo -e "~/$R is already present on your system."
+		else
+			ln -s `pwd`/$R ~/.local/share/
+			echo -e "\033[1mlinking\033[0m \033[4m$R\033[0m to ~/.local ..."
+		fi
+	done
 
 	# we won't copy the whole folder for those projects
 
