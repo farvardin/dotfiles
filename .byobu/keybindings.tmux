@@ -1,6 +1,6 @@
 ###############################################################################
 #    byobu's tmux f-key keybindings for Farvardin's dotfiles
-#    2025-10-12
+#    2025-10-21
 #
 #    Copyright (C) 2011-2014 Dustin Kirkland <kirkland@byobu.org>
 #
@@ -20,10 +20,11 @@
 ###############################################################################
 
 
-# Add F12 to the prefix list?
-
 # Clear the slate
 source $BYOBU_PREFIX/share/byobu/keybindings/f-keys.tmux.disable
+
+unbind-key -n F12
+
 
 # Byobu's Keybindings
 # Documented in: $BYOBU_PREFIX/share/doc/byobu/help.tmux.txt
