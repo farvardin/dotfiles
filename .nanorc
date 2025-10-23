@@ -63,7 +63,7 @@ bind ^P suspend main
 bind ^F whereis all     
 bind ^S savefile main  
 
-bind F12 nextbuf  main  # we don't need spellchecker 
+bind F10 nextbuf  main  # F12 is spellchecker / F10 may clash with some terminals, but ok with xterm and byobu. F12 clashes with byobu
 bind F11 findnext main 
 bind F23 findprevious main    # shift F11
 

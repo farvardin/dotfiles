@@ -4,6 +4,6 @@
     "Ctrl-Space": "WordRight",
     "Ctrl-w": "WordLeft",
     "CtrlUnderscore": "lua:comment.comment",
-    "F11": "command:jumptag",
-    "F12": "NextTab"
+    "F10": "NextTab",
+    "F11": "command:jumptag"
 }
