@@ -16,7 +16,7 @@ There are some dotfiles managers but I find it easier to use symbolic links
         or alternatively:
         
         hg clone http://hg.code.sf.net/p/farvardin-dotfiles/code farvardin-dotfiles-code
-        (you must have mercurial installed in the later case)
+        (you must have mercurial installed in the later case, the sf.net repo is not updated often)
 
 If you have read/write access to this repository (which is very doubtful, but it's just an example), 
 the command would be:
@@ -70,11 +70,44 @@ To add a new dotfile, just edit the deploy.sh script.
 - Yet Another Dotfiles Manager: https://yadm.io/
 
 
-## Using yadm
+### Using yadm
 
         yadm might be easier to use than the deploy script, but it has some drawbacks.
         
         yadm clone https://github.com/farvardin/dotfiles/
+
+
+## Tips 
+
+
+### Writerdecks
+
+Nano and micro can be great tools for writerdecks (devices / laptops dedicated to write prosa). I've tried to configure both tools to have similar behaviors.
+
+#### nano 
+
+- ctrl+g : show help
+- esc+n : hide line numbers
+- esc+z : hide title bar
+- esc+x : show status bar
+- ctrl+space : next word
+- F10 : next tab
+- F11 : next search
+
+#### micro
+
+- ctrl+e : command prompt
+ - help defaultkeys : show default key bindings.
+- ctrl+space : next word
+- F10 : next tab
+- F11 : launch fzf to select a section
+
+
+
+
+
+
+ 
 
 
 -------------------------------
