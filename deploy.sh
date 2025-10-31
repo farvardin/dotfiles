@@ -35,7 +35,7 @@ deploy_dotfiles() {
 	echo -e "\n\n"
 
 	# files
-	for R in .bashrc .ctwmrc .ctags garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .emacs .nanorc .Xresources 
+	for R in .bashrc .ctwmrc .ctags garglk.ini .gvimrc .hgrc .inputrc .profile .SciTEUser.properties SciTEStartup.lua .tmux.conf .vimrc .jedrc .emacs .nanorc .Xresources .Xresources-monochrome 
 		do
 		if [ -f ~/"$R" ]; then
 			echo -e "~/$R is already present on your system."
