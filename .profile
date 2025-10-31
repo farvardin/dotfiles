@@ -60,3 +60,8 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+
+# startup
+# cd ~/ownCloud/en_cours/feuilleton/
+# micro
+
