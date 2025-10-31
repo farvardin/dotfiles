@@ -8,6 +8,7 @@ source ~/.profile
 # use .Xresources instead, it should be loaded by the WM
 # xrdb -load ~/.Xdefaults
 xrdb -load ~/.Xresources
+# xrdb -load ~/.Xresources-monochrome
 # [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 if [ -f /etc/bash_completion ]; then
@@ -130,20 +131,23 @@ export SH=/bin/bash
 
 
 # colors, see https://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-bash-ps1-prompt
+# https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 
 case ${HOSTNAME} in
 	'saraswati')
-	    PS1='\[\033[1;32m\][\t]\[\033[38;5;202m\][\u@\h]\[\033[0;36m\]\w\$\[\033[0m\] '
+	    PS1='\[\033[1;32m\][\t]\[\033[38;5;9m\][\u@\h]\[\033[0;36m\]\w\$\[\033[0m\] '
 		;;
 	'belisama')
 	    PS1='\[\033[1;32m\][\t]\[\033[38;5;1m\][\u@\h]\[\033[0;36m\]\w\$\[\033[0m\] '
 		;;
 	*)
-	    PS1='\[\033[1;32m\][\t]\[\033[38;5;129m\][\u@\h]\[\033[0;36m\]\w\$\[\033[0m\] '
+	    PS1='\[\033[1;32m\][\t]\[\033[38;5;10m\][\u@\h]\[\033[0;36m\]\w\$\[\033[0m\] '
 		;;
 esac
 
 #export TERM=xterm-256color-italic
+# export TERM=xterm-mono
+
 # source "$HOME/.cargo/env"
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 

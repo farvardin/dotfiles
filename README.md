@@ -89,7 +89,7 @@ Nano and micro can be great tools for writerdecks (devices / laptops dedicated t
 meta = esc (most of the time)
 
 - ctrl+g : show help
-- ctrl+/ : goto line
+- ctrl+l : goto line
 - ctrl+f : find (search)
 - esc+n : hide line numbers
 - esc+z : hide title bar

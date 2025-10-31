@@ -62,6 +62,8 @@ bind ^P suspend main
 #bind ^V paste all      
 bind ^F whereis all     
 bind ^S savefile main  
+bind ^L  gotoline main 
+# bind ^T gotodir browser
 
 bind F10 nextbuf  main  # F12 is spellchecker / F10 may clash with some terminals, but ok with xterm and byobu. F12 clashes with byobu
 bind F11 findnext main 
