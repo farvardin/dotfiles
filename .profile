@@ -62,6 +62,13 @@ esac
 # <<< juliaup initialize <<<
 
 # startup
-# cd ~/ownCloud/en_cours/feuilleton/
-# micro
+if ! test -f /tmp/test-startup ; then  # execute only once 
+    touch /tmp/test-startup
+    if test -f ~/startup.sh ; then     # if startup.sh exist then run it
+        sh ~/startup.sh
+    fi
+fi
+
+
+
 

@@ -83,6 +83,7 @@ To add a new dotfile, just edit the deploy.sh script.
 ### Writerdecks
 
 Nano and micro can be great tools for writerdecks (devices / laptops dedicated to write prosa). I've tried to configure both tools to have similar behaviors.
+See also: https://github.com/sspaeti/dotfiles/tree/master/nvim/.config/nvim-wp
 
 #### nano 
 
