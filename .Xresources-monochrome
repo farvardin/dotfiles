@@ -52,7 +52,8 @@ Ctrl <Key> plus: larger-vt-font()
 !xterm*faceName: terminus
 !xterm*faceName: Monospace
 !xterm*faceName: Ubuntu Sans Mono Medium
-xterm*faceName: Victor MonoSemiBold
+!xterm*faceName: Victor MonoSemiBold
+xterm*faceName: Iosevka Term Slab Semibold
 
 xterm*faceSize: 16
 xterm*renderFont: true
@@ -128,7 +129,8 @@ xterm*faceSize7: 24
 *color14: #ADADAD
 ! white
 *color7: #D7D7D7
-*color15: #EEEEEC
+!*color15: #EEEEEC
+*color15: #DEDDDA
  
 ! dzen2 ----------------------------------------------------------------
 dzen2.font: -*-fixed-*-*-*-*-10-70-*-*-*-*-*-*
@@ -154,7 +156,8 @@ xterm*Background: black
 xterm*Border: gray
 xterm*DeiconifyWarp: off
 xterm*Font: -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
-xterm*Foreground: grey80
+!xterm*Foreground: grey80
+xterm*Foreground: #DEDDDA
 xterm*InternalBorder: 1
 xterm*MarginBell: off
 xterm*MenuFont: fixed8
@@ -234,16 +237,17 @@ URxvt.termName: rxvt-unicode
 URxvt.imLocale: fr_FR.UTF-8
 URxvt.saveLines: 5000
 URxvt.cursorBlink: true
-URxvt.foreground: #bcbcbc
-URxvt.background: #000000
+URxvt.foreground: #000000
+URxvt.background: #DEDDDA
 URxvt.cursorColor: #e0e080
 URxvt.throughColor: #8080f0
 URxvt.highlightColor: #343434
-URxvt.transparent: true
+URxvt.transparent: false
 URxvt.tintColor: #999999
 URxvt.fading: 40
 URxvt.visualBell: true
 URxvt.urgentOnBell: true
+!URxvt.font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 URxvt.font: -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
