@@ -28,8 +28,9 @@ set historylog      # Save the last 100 history searches for later use.
 set positionlog     # Saves the cursor position between editing sessions.
 #set zap             # Allows you to highlight text (CTRL+SHIFT+ARROW) and delete it with backspace.
 set autoindent      # A new line will have the same number of leading spaces as the previous one.
-#set indicator       # Displays a scroll bar on the right that shows the position and size of the current view port.
-#set minibar         # Displays file name and other information in the bottom bar. Removes top bar.
+set indicator       # Displays a scroll bar on the right that shows the position and size of the current view port.
+set scrollercolor blue 
+# set minibar         # Displays file name and other information in the bottom bar. Removes top bar.
 
 
 # Enable and set a working backup directory
