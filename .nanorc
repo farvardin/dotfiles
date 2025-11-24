@@ -13,7 +13,7 @@ set nohelp          # Disable the help information (CTRL+G to view the help scre
 
 
 # set suspend         # Enables CTRL+Z to suspend nano. (not available in old nano)
-set mouse
+# set mouse         # mouse can be annoying in terminal, use alt+m to enable it instead
 set tabsize 4       # Sets tab-to-spaces size to 4.
 set tabstospaces    # Converts TAB key press to spaces.
 
