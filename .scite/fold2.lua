@@ -6,6 +6,15 @@ version 0.01 alfa
 It is primitive variant of Steve Donovan's script <http://lua-users.org/wiki/SciteTextFolding>
 Intends for understanding mechanism of its work.
 extman.lua is not required.
+
+You can fold everything with 
+
+CTRL+LEFTMOUSEBUTTON on the "-" sign (folding sign on the left - near to #Region statement) 
+the unfold with "+".
+
+Or the opposite: left mouse button on the "-" sign then  
+CRTL+LEFTMOUSEBUTTON on the same "+" folding sign. 
+
 ------------------------------------------------------
 Connection:
 In file SciTEStartup.lua add a line:
@@ -55,3 +64,5 @@ function OnOpen(file)
 	end
 	return result
 end
+
+

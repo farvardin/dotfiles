@@ -82,47 +82,7 @@ To add a new dotfile, just edit the deploy.sh script.
 
 ### Writerdecks
 
-Nano and micro can be great tools for writerdecks (devices / laptops dedicated to write prosa). I've tried to configure both tools to have similar behaviors.
-See also: https://github.com/sspaeti/dotfiles/tree/master/nvim/.config/nvim-wp
-
-#### nano 
-
-meta = esc (most of the time)
-
-- ctrl+g : show help
-- ctrl+l : goto line
-- ctrl+f : find (search)
-- esc+n : hide line numbers
-- esc+z : hide title bar
-- esc+x : show status bar
-- ctrl+space : next word
-- F10 : next tab
-- F11 : next search
-- ctrl+s : save current file
-- ctrl+o : save as a new file
-- meta+m : disable mouse support
-
-
-https://www.nano-editor.org/dist/latest/cheatsheet.html
-
-
-#### micro
-
-- ctrl+n : hide ruler (line numbers)
-- ctrl+l : goto line
-- ctrl+e : command prompt
- - help defaultkeys : show default key bindings.
- - vsplit / hsplit : split window in vertical / horizontal
-- ctrl+w : switch to next window split
-- ctrl+space : next word
-- ctrl+r : previous word
-- F10 : next tab
-- F11 : launch fzf to select a section
-- ctrl+o : open a file
-
-
-https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md
-
+see writerdecks.md
 
 
 
