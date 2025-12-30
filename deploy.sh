@@ -215,6 +215,21 @@ deploy_dotfiles() {
 		fi
 	done
 
+	# mednafen
+	
+	for R in .mednafen/mednafen.cfg
+		do
+		if [ -f ~/$R ]; then
+			echo -e "~/$R is already present on your system."
+		else
+			echo -e "Installing mednafen links. "
+			mkdir ~/.mednafen/
+			ln -s `pwd`/$R ~/.mednafen/
+			echo -e "\033[1mlinking\033[0m \033[4m$R\033[0m to ~/ ..."
+		fi
+	done
+	
+	
 	# byobu
 
 	for R in .byobu/keybindings.tmux
