@@ -8,7 +8,7 @@
     "savecursor": true,
     "scrollbar": true,
     "softwrap": true,
-    "statusformatl": "$(filename) | $(modified)$(overwrite)($(line),$(col)) | $(status.size) $(status.paste)| ft:$(opt:filetype) | $(opt:fileformat) | $(opt:encoding)",
+    "statusformatl": "$(filename) | $(modified)$(overwrite)$(line)/$(lines),$(col) | $(status.size) $(status.paste)| ft:$(opt:filetype) | $(opt:fileformat) | $(opt:encoding)",
     "statusformatr": "$(status.branch) | $(status.hash)  | $(bind:ToggleHelp): help",
     "wordwrap": true
 }

@@ -110,7 +110,7 @@ alias_help()
 
 
 
-export  PATH=$PATH:/usr/NX/bin/:/usr/local/lib/:/usr/local/include/:/usr/local/bin:/home/eric/.local/share/Steam/ubuntu12_32/steam-runtime/i386/usr/lib/i386-linux-gnu/:/opt/utroff/bin/:$HOME/.local/bin/:$HOME/_mesdocs/mes_scripts/:$HOME/ownCloud/divers/opt/:/opt/:/usr/local/Gambit/bin/:$HOME/.local/share/yabridge/
+export  PATH=$PATH:/usr/NX/bin/:/usr/local/lib/:/usr/local/include/:/usr/local/bin:/home/eric/.local/share/Steam/ubuntu12_32/steam-runtime/i386/usr/lib/i386-linux-gnu/:/opt/utroff/bin/:$HOME/.local/bin/:$HOME/_mesdocs/mes_scripts/:$HOME/ownCloud/divers/opt/:/opt/:/usr/local/Gambit/bin/:$HOME/.local/share/yabridge/:$HOME/sync/scripts/
 
 export GS_LIB=/home/eric/_mesdocs/mes_musiques/abc/site/fonts/
 #export JAVA_HOME=/opt/java/jre/bin/java
