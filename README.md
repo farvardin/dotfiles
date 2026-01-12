@@ -91,5 +91,5 @@ see writerdecks.md
 
 
 -------------------------------
-
-https://sourceforge.net/p/farvardin-dotfiles/code/ci/default/tree/
+https://github.com/farvardin/dotfiles
+old repository: https://sourceforge.net/p/farvardin-dotfiles/code/ci/default/tree/
