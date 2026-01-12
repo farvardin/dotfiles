@@ -10,12 +10,12 @@ hardware, but an old laptop might be easier and cheaper.
 You might not need to install a full desktop environment, so it will boot 
 straight to the console / TTY. 
 
-### Additional tweaking of the hardware
+### Additional tweaking of the hardware and the OS
 
 You can install a light window manager (like openbox or windowmaker) and 
-start it, if needed, with the ``startx`` command from the console.
+start it, if needed, with the ``startx`` command from the console. You can adjust brightness with blight
 
-- apt-install wmaker openbox
+- apt-install wmaker openbox blight
 
 It's possible to temporary change the font size in TTY with:
 
@@ -29,10 +29,20 @@ FONTFACE="Terminus"
 FONTSIZE="32x16"
 ``` 
 
+If you save your work using a git forge (like gitlab or github), you might need to save your ssh key.
+
+Use
+
+eval `ssh-agent -s`
+eval `ssh-add ~/.ssh/id_rsa`
+
+to prevent typing your key every time.
+
+
 ## Software
 
 Nano and micro can be great tools for writerdecks. 
-I've tried to configure both tools to have similar behaviors.
+I've tried to configure both tools to have similar behaviors (see the dotfiles).
 See also: https://github.com/sspaeti/dotfiles/tree/master/nvim/.config/nvim-wp
 
 ### nano 
@@ -46,7 +56,7 @@ meta = esc (most of the time)
 - esc+z : hide title bar
 - esc+x : show status bar
 - ctrl+space : next word
-- F10 : next tab
+- F10 : next tab (you can open multiple files from the command line)
 - F11 : next search
 - ctrl+s : save current file
 - ctrl+o : save as a new file
@@ -102,6 +112,7 @@ https://www.typeframe.net/
 
 ### ESP32 lilygo TTGO 
 
-To convert to French encoding:
+If you save your work from a DOS session, to convert to French encoding:
 ``dos2unix -863 MYTEXT.TXT``
+
 
