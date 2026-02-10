@@ -1,0 +1,29 @@
+/* https://github.com/Zettlr/Zettlr/discussions/2863 
+https://forum.zettlr.com/d/8-share-your-favourite-custom-css-hacks/11
+*/
+
+body:not(.dark) {
+
+    .cm-url,
+    .cm-link,
+    .cm-code-mark,
+    .cm-zkn-tag,
+    .cm-zkn-link {
+        color: #795418 !important;
+    }
+
+}
+
+
+body div.tree-item-container .tree-item.selected .display-text {
+    /*background-color: #456;*/
+    color: #ffffffff;
+}
+
+
+:root {
+    --system-accent-color: #419000 ;
+    /*--system-accent-color-contrast: #ddd;*/
+}
+
+div.cm-gutter {color: #bdb2b2} 

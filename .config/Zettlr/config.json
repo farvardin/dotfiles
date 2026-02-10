@@ -1,0 +1,424 @@
+{
+  "version": "4.1.1",
+  "buildDate": "2026-01-27T19:59:54.096Z",
+  "app": {
+    "openFiles": [
+      "/home/eric/ownCloud/en_cours/feuilleton/feuilleton.t2t",
+      "/home/eric/ownCloud/en_cours/feuilleton/notes.txt"
+    ],
+    "openWorkspaces": [
+      "/home/eric/ownCloud/owncloud-notes/lionwiki/var/pages",
+      "/home/eric/_mesdocs/mes_sauvegardes/raspberrypi01/lionwiki-t2t/var/pages",
+      "/home/eric/_mesdocs/mes_sites_internet/gemini/sites",
+      "/home/eric/ownCloud/owncloud-notes/zettelbox",
+      "/home/eric/Documents/Zettlr Tutorial"
+    ]
+  },
+  "openDirectory": "/home/eric/ownCloud/owncloud-notes/zettelbox",
+  "dialogPaths": {
+    "askFileDialog": "/home/eric/ownCloud/en_cours/feuilleton",
+    "askDirDialog": "/home/eric/_mesdocs/mes_sites_internet/gemini/sites",
+    "askLangFileDialog": ""
+  },
+  "window": {
+    "nativeAppearance": true,
+    "vibrancy": false,
+    "sidebarVisible": true,
+    "currentSidebarTab": "relatedFiles",
+    "recentGlobalSearches": [
+      "#écriture",
+      "#garvalf",
+      "#506",
+      "#yaml",
+      "#pédale",
+      "#guitare",
+      "musique.guitare",
+      "guitare",
+      "#moto",
+      "moto"
+    ]
+  },
+  "ui": {
+    "fileManagerSplitSize": [
+      20,
+      80
+    ],
+    "editorSidebarSplitSize": [
+      84,
+      16
+    ]
+  },
+  "attachmentExtensions": [],
+  "darkMode": false,
+  "alwaysReloadFiles": true,
+  "autoDarkMode": "system",
+  "autoDarkModeStart": "21:00",
+  "autoDarkModeEnd": "06:00",
+  "fileMeta": true,
+  "fileMetaTime": "modtime",
+  "sorting": "natural",
+  "sortFoldersFirst": true,
+  "muteLines": true,
+  "fileManagerMode": "combined",
+  "fileManagerShowFiles": true,
+  "fileManagerShowWorkspaces": true,
+  "fileNameDisplay": "title+heading",
+  "newFileNamePattern": "%id.txt",
+  "newFileDontPrompt": false,
+  "export": {
+    "dir": "temp",
+    "stripTags": false,
+    "autoOpenExportedFiles": true,
+    "enforceMarkSupport": true,
+    "stripLinks": "full",
+    "cslLibrary": "",
+    "cslStyle": "",
+    "useBundledPandoc": true,
+    "exportQmdWithQuarto": false,
+    "customCommands": [],
+    "selectedProfiles": [
+      {
+        "filePath": "/home/eric/Documents/Zettlr Tutorial/welcome.md",
+        "profile": "HTML.yaml"
+      }
+    ],
+    "lastUsedProfile": "HTML.yaml"
+  },
+  "zkn": {
+    "idRE": "(id\\d{8}x\\d{6})",
+    "idGen": "id%Y%M%Dx%h%m%s",
+    "linkAddFileTitle": true,
+    "linkWithIDIfPossible": true,
+    "linkFormat": "title|link",
+    "autoSearch": true,
+    "customDirectory": "/home/eric/ownCloud/owncloud-notes/zettelbox"
+  },
+  "editor": {
+    "autoSave": "off",
+    "autocompleteSuggestEmojis": false,
+    "autoCloseBrackets": true,
+    "showLinkPreviews": true,
+    "showWhitespace": false,
+    "showMarkdownLineNumbers": false,
+    "defaultSaveImagePath": "/home/eric/ownCloud/owncloud-notes/zettelbox",
+    "citeStyle": "regular",
+    "enableTableHelper": true,
+    "indentUnit": 4,
+    "indentWithTabs": false,
+    "fontSize": 18,
+    "countChars": false,
+    "inputMode": "default",
+    "boldFormatting": "**",
+    "italicFormatting": "_",
+    "readabilityAlgorithm": "dale-chall",
+    "showStatusbar": true,
+    "showFormattingToolbar": true,
+    "lint": {
+      "markdown": false,
+      "languageTool": {
+        "active": false,
+        "level": "picky",
+        "motherTongue": "fr-FR",
+        "variants": {
+          "en": "en-US",
+          "de": "de-DE",
+          "pt": "pt-PT",
+          "ca": "ca-ES"
+        },
+        "ignoredRules": [],
+        "provider": "official",
+        "customServer": "",
+        "username": "",
+        "apiKey": ""
+      }
+    },
+    "autoCorrect": {
+      "active": false,
+      "magicQuotes": {
+        "primary": "\"…\"",
+        "secondary": "'…'"
+      },
+      "replacements": [
+        {
+          "key": "-->",
+          "value": "→"
+        },
+        {
+          "key": "–>",
+          "value": "→"
+        },
+        {
+          "key": "<--",
+          "value": "←"
+        },
+        {
+          "key": "<->",
+          "value": "↔"
+        },
+        {
+          "key": "<-->",
+          "value": "↔"
+        },
+        {
+          "key": "==>",
+          "value": "⇒"
+        },
+        {
+          "key": "<==",
+          "value": "⇐"
+        },
+        {
+          "key": "<=>",
+          "value": "⇔"
+        },
+        {
+          "key": "<==>",
+          "value": "⇔"
+        },
+        {
+          "key": "!=",
+          "value": "≠"
+        },
+        {
+          "key": "<>",
+          "value": "≠"
+        },
+        {
+          "key": "+-",
+          "value": "±"
+        },
+        {
+          "key": ":time:",
+          "value": "×"
+        },
+        {
+          "key": ":division:",
+          "value": "÷"
+        },
+        {
+          "key": "<=",
+          "value": "≤"
+        },
+        {
+          "key": ">=",
+          "value": "≥"
+        },
+        {
+          "key": "1/2",
+          "value": "½"
+        },
+        {
+          "key": "1/3",
+          "value": "⅓"
+        },
+        {
+          "key": "2/3",
+          "value": "⅔"
+        },
+        {
+          "key": "1/4",
+          "value": "¼"
+        },
+        {
+          "key": "3/4",
+          "value": "¾"
+        },
+        {
+          "key": "1/8",
+          "value": "⅛"
+        },
+        {
+          "key": "3/8",
+          "value": "⅜"
+        },
+        {
+          "key": "5/8",
+          "value": "⅝"
+        },
+        {
+          "key": "7/8",
+          "value": "⅞"
+        },
+        {
+          "key": "mm2",
+          "value": "mm²"
+        },
+        {
+          "key": "cm2",
+          "value": "cm²"
+        },
+        {
+          "key": "m2",
+          "value": "m²"
+        },
+        {
+          "key": "km2",
+          "value": "km²"
+        },
+        {
+          "key": "mm3",
+          "value": "mm³"
+        },
+        {
+          "key": "cm3",
+          "value": "cm³"
+        },
+        {
+          "key": "ccm",
+          "value": "cm³"
+        },
+        {
+          "key": "m3",
+          "value": "m³"
+        },
+        {
+          "key": "km3",
+          "value": "km³"
+        },
+        {
+          "key": ":sup2:",
+          "value": "²"
+        },
+        {
+          "key": ":sup3:",
+          "value": "³"
+        },
+        {
+          "key": ":deg:",
+          "value": "°"
+        },
+        {
+          "key": ":eur",
+          "value": "€"
+        },
+        {
+          "key": ":gbp",
+          "value": "£"
+        },
+        {
+          "key": ":yen",
+          "value": "¥"
+        },
+        {
+          "key": ":cent",
+          "value": "¢"
+        },
+        {
+          "key": ":inr:",
+          "value": "₹"
+        },
+        {
+          "key": "(c)",
+          "value": "©"
+        },
+        {
+          "key": "(tm)",
+          "value": "™"
+        },
+        {
+          "key": "(r)",
+          "value": "®"
+        },
+        {
+          "key": "...",
+          "value": "…"
+        },
+        {
+          "key": "--",
+          "value": "–"
+        },
+        {
+          "key": "---",
+          "value": "—"
+        }
+      ],
+      "matchWholeWords": false
+    }
+  },
+  "display": {
+    "theme": "bielefeld",
+    "hideToolbarInDistractionFree": true,
+    "markdownFileExtensions": true,
+    "imageWidth": 100,
+    "imageHeight": 50,
+    "renderingMode": "raw",
+    "renderCitations": true,
+    "renderIframes": true,
+    "renderImages": true,
+    "renderLinks": true,
+    "renderMath": true,
+    "renderTasks": true,
+    "renderHTags": true,
+    "renderEmphasis": true,
+    "renderPandoc": true,
+    "renderHorizontalRules": true
+  },
+  "files": {
+    "builtin": {
+      "showInFilemanager": true,
+      "showInSidebar": false,
+      "openWith": "zettlr"
+    },
+    "images": {
+      "showInFilemanager": true,
+      "showInSidebar": false,
+      "openWith": "zettlr"
+    },
+    "pdf": {
+      "showInFilemanager": true,
+      "showInSidebar": false,
+      "openWith": "zettlr"
+    },
+    "msoffice": {
+      "showInFilemanager": false,
+      "showInSidebar": true,
+      "openWith": "system"
+    },
+    "openOffice": {
+      "showInFilemanager": false,
+      "showInSidebar": true,
+      "openWith": "system"
+    },
+    "dataFiles": {
+      "showInFilemanager": false,
+      "showInSidebar": false,
+      "openWith": "system"
+    }
+  },
+  "selectedDicts": [
+    "fr-FR"
+  ],
+  "appLang": "en-US",
+  "debug": true,
+  "watchdog": {
+    "activatePolling": false,
+    "stabilityThreshold": 1000
+  },
+  "system": {
+    "deleteOnFail": false,
+    "leaveAppRunning": false,
+    "avoidNewTabs": true,
+    "iframeWhitelist": [
+      "www.youtube.com",
+      "player.vimeo.com"
+    ],
+    "checkForUpdates": false,
+    "zoomBehavior": "gui"
+  },
+  "checkForBeta": false,
+  "displayToolbarButtons": {
+    "showOpenPreferencesButton": true,
+    "showNewFileButton": true,
+    "showPreviousFileButton": true,
+    "showNextFileButton": true,
+    "showMarkdownCommentButton": true,
+    "showMarkdownLinkButton": true,
+    "showMarkdownImageButton": true,
+    "showMarkdownMakeTaskListButton": true,
+    "showInsertTableButton": true,
+    "showInsertFootnoteButton": false,
+    "showDocumentInfoText": true,
+    "showPomodoroButton": true
+  },
+  "uuid": "eda130d8-b457-4dd6-8d71-09ddd5fd6828"
+}

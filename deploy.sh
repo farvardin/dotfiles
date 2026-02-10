@@ -128,7 +128,7 @@ deploy_dotfiles() {
 
 
 	# folders
-	for R in .vim .scite .dgen 
+	for R in .vim .scite .dgen Gophie
 		do
 		if [ -e ~/$R ]; then
 			echo -e "~/$R is already present on your system. "
@@ -257,6 +257,19 @@ deploy_dotfiles() {
 		fi
 	done
 
+	# Zettl
+	for R in .config/Zettlr/snippets .config/Zettlr/config.json .config/Zettlr/custom.css 
+		do
+		if [ -f ~/$R ]; then
+			echo -e "~/$R is already present on your system. Backup and/or delete it first manually."
+		else
+			echo -e "Installing Zettlr links. "
+			mkdir -p ~/.config/Zettlr/
+			ln -s `pwd`/$R ~/.config/Zettlr/
+			echo -e "\033[1mlinking\033[0m \033[4m$R\033[0m to ~/ ..."
+		fi
+	done
+	
 	# windowmaker 
 	for R in GNUstep/Library/WindowMaker/Themes/GruvBox.style
 		do
