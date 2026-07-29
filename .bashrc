@@ -230,3 +230,6 @@ esac
 export PATH="$PATH:/home/eric/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+# opencode
+export PATH=/home/eric/.opencode/bin:$PATH

@@ -7,6 +7,7 @@ Lua extensions for SciTE.
 SciTE only supports **one** `ext.lua.startup.script`. Load all scripts from a single startup file (e.g. `SciteStartup.lua`):
 
 ```lua
+dofile(props["SciteDefaultHome"] .. "/file_finder.lua")
 dofile(props["SciteDefaultHome"] .. "/t2t_navigator.lua")
 dofile(props["SciteDefaultHome"] .. "/snippets.lua")
 ```
@@ -14,9 +15,70 @@ dofile(props["SciteDefaultHome"] .. "/snippets.lua")
 Or with a user-local path:
 
 ```lua
+dofile(props["SciteUserHome"] .. "/.scite/file_finder.lua")
 dofile(props["SciteUserHome"] .. "/.scite/t2t_navigator.lua")
 dofile(props["SciteUserHome"] .. "/.scite/snippets.lua")
 ```
+
+---
+
+## file_finder.lua — Fuzzy file picker
+
+Replace Ctrl+O with a filterable list of files — type a few characters of the filename to jump to it.
+
+### Keybindings
+
+Ctrl+O is intercepted automatically. To also bind a command explicitly:
+
+```properties
+command.name.13.*=Find File
+command.13.*=FindFile
+command.mode.13.*=subsystem:lua,savebefore:no
+command.shortcut.13.*=Ctrl+Shift+O
+
+command.name.14.*=Rescan Files
+command.14.*=FindFileRescan
+command.mode.14.*=subsystem:lua,savebefore:no
+```
+
+### Usage
+
+| Shortcut | Action |
+|----------|--------|
+| **Ctrl+O** | Open file picker — type to filter by filename, Enter to open |
+| **Ctrl+Shift+O** | Same (explicit command binding) |
+
+The list shows `filename  →  /full/path` sorted alphabetically by filename. Typing filters by prefix — e.g. typing `sni` jumps to `snippets.lua`.
+
+### Configuration
+
+Add to your `.properties` file:
+
+```properties
+# Directories to scan — colon-separated, ~ is expanded (default: current file's directory)
+file.finder.roots=~/src:~/notes
+
+# Directory/file names to skip — comma-separated
+file.finder.exclude=.git,node_modules,__pycache__,.cache,build,dist
+
+# Maximum recursion depth (default: 6)
+file.finder.depth=6
+
+# File extensions to include — comma-separated, empty = all files
+file.finder.extensions=lua,py,md,txt
+
+# Maximum number of files shown (default: 2000)
+file.finder.max=2000
+
+# Set to 0 to keep the native Ctrl+O dialog and use only the explicit command
+file.finder.override.ctrlO=1
+```
+
+### Notes
+
+- Files are indexed on first open and cached until the directory changes.
+- Call `FindFileRescan()` from any script or command to force a rescan.
+- Requires `find` (standard on Linux/macOS). Not supported on Windows without a `find` port.
 
 ---
 
@@ -68,6 +130,116 @@ local MARKDOWN_HEADINGS = false
 |-------|---------|
 | txt2tags symmetric | `= Title =`, `== Title ==`, … |
 | Markdown (optional) | `# Title`, `## Title`, … |
+
+---
+
+## t2t_format.lua — Context-menu formatting
+
+Right-click formatting for txt2tags **and** Markdown, auto-detected per buffer. Also auto-continues `- ` lists on Enter.
+
+### Keybindings / context menu
+
+Add to your `.properties` file (commands 20-26 reserved for this script):
+
+```properties
+command.name.20.*.t2t;*.txt;*.md=Titre 1
+command.20.*.t2t;*.txt;*.md=T2THeading1
+command.mode.20.*.t2t;*.txt;*.md=subsystem:lua,savebefore:no
+
+command.name.21.*.t2t;*.txt;*.md=Titre 2
+command.21.*.t2t;*.txt;*.md=T2THeading2
+command.mode.21.*.t2t;*.txt;*.md=subsystem:lua,savebefore:no
+
+command.name.22.*.t2t;*.txt;*.md=Titre 3
+command.22.*.t2t;*.txt;*.md=T2THeading3
+command.mode.22.*.t2t;*.txt;*.md=subsystem:lua,savebefore:no
+
+command.name.23.*.t2t;*.txt;*.md=Gras
+command.23.*.t2t;*.txt;*.md=T2TBold
+command.mode.23.*.t2t;*.txt;*.md=subsystem:lua,savebefore:no
+
+command.name.24.*.t2t;*.txt;*.md=Italique
+command.24.*.t2t;*.txt;*.md=T2TItalic
+command.mode.24.*.t2t;*.txt;*.md=subsystem:lua,savebefore:no
+
+command.name.25.*.t2t;*.txt;*.md=Souligné
+command.25.*.t2t;*.txt;*.md=T2TUnderline
+command.mode.25.*.t2t;*.txt;*.md=subsystem:lua,savebefore:no
+
+command.name.26.*.t2t;*.txt;*.md=Barré
+command.26.*.t2t;*.txt;*.md=T2TStrike
+command.mode.26.*.t2t;*.txt;*.md=subsystem:lua,savebefore:no
+
+# IDM_TOOLS(1100) + N gives the context-menu command id for command.name.N.*
+# Must stay unconditional — see CLAUDE.md for why an if/match around this fails.
+user.context.menu=Titre 1|1120|Titre 2|1121|Titre 3|1122|||Gras|1123|Italique|1124|Souligné|1125|Barré|1126
+```
+
+### Usage
+
+Syntax is auto-detected per buffer (lexer, falling back to file extension):
+
+| Action | txt2tags | Markdown |
+|--------|----------|----------|
+| Titre 1/2/3 | `= x =` / `== x ==` / `=== x ===` | `# x` / `## x` / `### x` |
+| Gras | `**x**` | `**x**` |
+| Italique | `//x//` | `*x*` |
+| Souligné | `__x__` | `<u>x</u>` |
+| Barré | `--x--` | `~~x~~` |
+
+Bold/italic/underline/strike toggle off if the selection is already wrapped; with no selection, the marks are inserted with the caret placed between them. Headings replace the whole current line.
+
+### Auto-continued lists
+
+Pressing Enter at the end of a `- ` list item (any indentation level, txt2tags or Markdown) starts the next line with the same marker. Pressing Enter again on an empty item (`- ` with nothing typed) removes the marker instead of adding another one — two Enters in a row ends the list.
+
+```
+- first item
+- second item⏎        ← Enter here
+- ⏎                    ← empty item, Enter again removes the marker and stops
+next paragraph
+```
+
+---
+
+## sexpr_eval.lua — Context-menu expression evaluator
+
+Evaluate Lisp-style s-expressions from the right-click menu: select `(+ 75 1581 1000)`, right-click, "Évaluer" — the selection is replaced with `(+ 75 1581 1000) = 2656`.
+
+### Keybindings / context menu
+
+Add to your `.properties` file (command 27, no file-extension restriction — it's useful on any file type):
+
+```properties
+command.name.27.*=Évaluer
+command.27.*=EvalSExpr
+command.mode.27.*=subsystem:lua,savebefore:no
+
+# IDM_TOOLS(1100) + N gives the context-menu command id for command.name.N.*
+user.context.menu=...|||Évaluer|1127
+```
+
+### Usage
+
+Function application is written `(f x y z ...)`, and expressions can nest: `(+ 1 (* 2 3))` → `7`.
+
+| Function | Arity | Example |
+|----------|-------|---------|
+| `+` `*` | any | `(+ 1 2 3)` → `6` |
+| `-` `/` | 1 or more | `(- 10)` → `-10`, `(- 10 3 2)` → `5` |
+| `mod` `expt` | 2 | `(mod 7 3)` → `1`, `(expt 2 10)` → `1024` |
+| `min` `max` | any | `(max 3 1 2)` → `3` |
+| `abs` `sqrt` `floor` `ceil` | 1 | `(sqrt 16)` → `4` |
+
+Results that are whole numbers are printed without a decimal point. Errors (unbalanced parentheses, unknown function, empty list) print to the output pane instead of touching the selection.
+
+### Extending
+
+Add a function by adding one entry to the `SEXPR_FUNCS` table at the top of `sexpr_eval.lua`:
+
+```lua
+SEXPR_FUNCS["pow"] = function(a, b) return a ^ b end
+```
 
 ---
 

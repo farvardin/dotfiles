@@ -36,6 +36,7 @@ ZK_ID_FORMAT = "id%Y%M%Dx%h%m%s"
 SNIPPETS = {
     zk   = "$ZK_ID",
     date = "%Y-%M-%D",
+    broken_bar = "¦",
     date_H2 = "== %Y-%M-%D ==",
     todo    = "TODO($ZK_ID): $CURSOR", 
     ref = "== Références == \n\n%----------------\n$ZK_ID\n%----------------\n\nVoir également :\n- \n- \n\n\n#tag\n\n\n%EOF\n",

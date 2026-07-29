@@ -10,6 +10,11 @@
 -- dofile (props["SciteUserHome"].."/.scite/eliza.lua") 
 -- dofile (props["SciteUserHome"].."/.scite/scitefunclist.lua") 
 --dofile (props["SciteUserHome"].."/.scite/date.lua") 
+dofile(props["SciteUserHome"] .. "/.scite/file_finder.lua")
+dofile(props["SciteUserHome"] .. "/.scite/recent_files.lua")
+dofile(props["SciteUserHome"] .. "/.scite/t2t_format.lua")
+dofile(props["SciteUserHome"] .. "/.scite/sexpr_eval.lua")
+
 
 function insertDate() 
 	MyDate = os.date("\n== %Y-%m-%d ==\n")
